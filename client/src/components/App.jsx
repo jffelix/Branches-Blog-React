@@ -1,5 +1,6 @@
 import React from "react";
 import SignIn from "./login/SignIn.jsx";
+import SignUp from "./login/SignUp.jsx";
 
 const App = () => {
 
@@ -7,7 +8,7 @@ const App = () => {
         <div>
             <h1>Branches Blog</h1>
             <div>
-                <SignIn />
+                <SignUp />
             </div>
         </div>
     )

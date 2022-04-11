@@ -11,7 +11,7 @@ const SignUp = () => {
             <div className="userEmail">
             <h3>Create an account</h3>
             <p>Email</p>
-            <input value={userEmail} readOnly/>
+            <input onChange={(e) => setUserEmail(e.target.value)} value={userEmail}/>
             </div>
             <div>
             <PasswordInput
