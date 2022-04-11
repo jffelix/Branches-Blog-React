@@ -1,0 +1,37 @@
+{
+  "name": "branches-blog-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jffelix/Branches-Blog-React.git"
+  },
+  "author": "Jean-Luc Felix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jffelix/Branches-Blog-React/issues"
+  },
+  "homepage": "https://github.com/jffelix/Branches-Blog-React#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
+    "firebase": "^9.6.10",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1"
+  }
+}
