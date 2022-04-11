@@ -1,0 +1,25 @@
+import React, { useState } from "react";
+import PasswordInput from "./PasswordInput.jsx";
+
+const SignUp = () => {
+
+    const [ userName, setUserName ] = useState([]);
+    const [ userEmail, setUserEmail ] = useState([]);
+
+    return (
+        <div>
+            <div className="userEmail">
+            <h3>Create an account</h3>
+            <p>Email</p>
+            <input value={userEmail} readOnly/>
+            </div>
+            <div>
+            <PasswordInput
+            userName={userName}
+            userEmail={userEmail} />
+            </div>
+        </div>
+    )
+}
+
+export default SignUp;
