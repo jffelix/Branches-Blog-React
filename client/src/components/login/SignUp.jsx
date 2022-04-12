@@ -9,14 +9,13 @@ const SignUp = () => {
     return (
         <div>
             <div className="userEmail">
-            <h3>Create an account</h3>
-            <p>Email</p>
-            <input onChange={(e) => setUserEmail(e.target.value)} value={userEmail}/>
-            </div>
+                <h3>Create an account</h3>
+                <p>Email</p>
+                <input onChange={(e) => setUserEmail(e.target.value)} value={userEmail}/>
+                </div>
             <div>
-            <PasswordInput
-            userName={userName}
-            userEmail={userEmail} />
+                <PasswordInput
+                userEmail={userEmail} />
             </div>
         </div>
     )

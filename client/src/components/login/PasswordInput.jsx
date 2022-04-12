@@ -63,6 +63,25 @@ const PasswordInput = (props) => {
     }
   }
 
+  const submitUserForm = () => {
+
+    if (props.userEmail.length === 0) {
+      alert("Please input an email.");
+      return;
+    }
+    if (inputText.length === 0) {
+      alert("Please input a password.");
+      return;
+    }
+
+    let userObj = {
+      email: props.userEmail,
+      password: inputText
+    }
+
+    console.log("userObj: ", userObj);
+  }
+
   const toggleShow = () => {
     setShowPassword(prevState => !showPassword);
   }
@@ -152,7 +171,7 @@ const PasswordInput = (props) => {
               <li>1 Number</li>
             </div>
           }
-          {
+          {/* {
             doesContainEmail(inputText) ?
             <div>
               <li>Should Not Match Your Email Address</li>
@@ -161,9 +180,17 @@ const PasswordInput = (props) => {
             <div>
               <li className="metRequirement">Should Not Match Your Email Address</li>
             </div>
-          }
+          } */}
         </ul>
       </div>
+      {
+        ifWithinLimit(inputText) && doesContainUppercase(inputText) && doesContainLowercase(inputText) && doesContainNumber(inputText) ? 
+        <div className="submit">
+          <button onClick={submitUserForm}>Submit</button>
+        </div>
+        :
+        null
+      }
     </div>
   )
 
