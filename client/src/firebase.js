@@ -1,17 +1,18 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
+import firebaseConfig from "./firebase.config.js";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyCU1clgItRtKSKjuK0nXwqiPTUxcR2cNVM",
-    authDomain: "branches-blog-development.firebaseapp.com",
-    projectId: "branches-blog-development",
-    storageBucket: "branches-blog-development.appspot.com",
-    messagingSenderId: "176445850049",
-    appId: "1:176445850049:web:4e3a6dd2e591da606e6f40",
-    measurementId: "G-89PVPF61YT"
+const config = {
+    apiKey: firebaseConfig.apiKey,
+    authDomain: firebaseConfig.authDomain,
+    projectId: firebaseConfig.projectId,
+    storageBucket: firebaseConfig.storageBucket,
+    messagingSenderId: firebaseConfig.messagingSenderId,
+    appId: firebaseConfig.appId,
+    measurementId: firebaseConfig.measurementId
 };
 
-const app = firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(config);
 
 export const auth = app.auth();
 

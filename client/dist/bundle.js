@@ -295,6 +295,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./client/src/firebase.config.js":
+/*!***************************************!*\
+  !*** ./client/src/firebase.config.js ***!
+  \***************************************/
+/***/ ((module) => {
+
+eval("var firebaseConfig = {\n  apiKey: \"AIzaSyCU1clgItRtKSKjuK0nXwqiPTUxcR2cNVM\",\n  authDomain: \"branches-blog-development.firebaseapp.com\",\n  projectId: \"branches-blog-development\",\n  storageBucket: \"branches-blog-development.appspot.com\",\n  messagingSenderId: \"176445850049\",\n  appId: \"1:176445850049:web:4e3a6dd2e591da606e6f40\",\n  measurementId: \"G-89PVPF61YT\"\n};\nmodule.exports = firebaseConfig;\n\n//# sourceURL=webpack://branches-blog-react/./client/src/firebase.config.js?");
+
+/***/ }),
+
 /***/ "./client/src/firebase.js":
 /*!********************************!*\
   !*** ./client/src/firebase.js ***!
@@ -302,7 +312,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"auth\": () => (/* binding */ auth),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var firebase_compat_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/compat/app */ \"./node_modules/firebase/compat/app/dist/index.esm.js\");\n/* harmony import */ var firebase_compat_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/compat/auth */ \"./node_modules/firebase/compat/auth/dist/index.esm.js\");\n\n\nvar firebaseConfig = {\n  apiKey: \"AIzaSyCU1clgItRtKSKjuK0nXwqiPTUxcR2cNVM\",\n  authDomain: \"branches-blog-development.firebaseapp.com\",\n  projectId: \"branches-blog-development\",\n  storageBucket: \"branches-blog-development.appspot.com\",\n  messagingSenderId: \"176445850049\",\n  appId: \"1:176445850049:web:4e3a6dd2e591da606e6f40\",\n  measurementId: \"G-89PVPF61YT\"\n};\nvar app = firebase_compat_app__WEBPACK_IMPORTED_MODULE_0__[\"default\"].initializeApp(firebaseConfig);\nvar auth = app.auth();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (app);\n\n//# sourceURL=webpack://branches-blog-react/./client/src/firebase.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"auth\": () => (/* binding */ auth),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var firebase_compat_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/compat/app */ \"./node_modules/firebase/compat/app/dist/index.esm.js\");\n/* harmony import */ var firebase_compat_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/compat/auth */ \"./node_modules/firebase/compat/auth/dist/index.esm.js\");\n/* harmony import */ var _firebase_config_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./firebase.config.js */ \"./client/src/firebase.config.js\");\n/* harmony import */ var _firebase_config_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_firebase_config_js__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nvar config = {\n  apiKey: (_firebase_config_js__WEBPACK_IMPORTED_MODULE_2___default().apiKey),\n  authDomain: (_firebase_config_js__WEBPACK_IMPORTED_MODULE_2___default().authDomain),\n  projectId: (_firebase_config_js__WEBPACK_IMPORTED_MODULE_2___default().projectId),\n  storageBucket: (_firebase_config_js__WEBPACK_IMPORTED_MODULE_2___default().storageBucket),\n  messagingSenderId: (_firebase_config_js__WEBPACK_IMPORTED_MODULE_2___default().messagingSenderId),\n  appId: (_firebase_config_js__WEBPACK_IMPORTED_MODULE_2___default().appId),\n  measurementId: (_firebase_config_js__WEBPACK_IMPORTED_MODULE_2___default().measurementId)\n};\nvar app = firebase_compat_app__WEBPACK_IMPORTED_MODULE_0__[\"default\"].initializeApp(config);\nvar auth = app.auth();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (app);\n\n//# sourceURL=webpack://branches-blog-react/./client/src/firebase.js?");
 
 /***/ }),
 
