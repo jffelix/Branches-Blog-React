@@ -1,6 +1,7 @@
 import React from "react";
 import SignIn from "./login/SignIn.jsx";
 import SignUp from "./login/SignUp.jsx";
+import Dashboard from "./Dashboard.jsx";
 import { Container } from "react-bootstrap";
 import AuthProvider from "../context/authContext.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -9,17 +10,19 @@ const App = () => {
 
     return (
         <div>
-            <Container>
+            {/* <Container> */}
             <div>
                 <Router>
                     <AuthProvider>
                         <Routes>
-                            <Route path="/" element={<SignUp />} />
+                            <Route path="/dashboard" element={<Dashboard />}/>
+                            <Route exact path="/" element={<SignUp />} />
+                            <Route path="/signin" element={<SignIn />} />
                         </Routes>
                     </AuthProvider>
                 </Router>
             </div>
-            </Container>
+            {/* </Container> */}
         </div>
     )
 }
