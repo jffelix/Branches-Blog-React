@@ -2,6 +2,7 @@ import React from "react";
 import SignIn from "./login/SignIn.jsx";
 import SignUp from "./login/SignUp.jsx";
 import Dashboard from "./Dashboard.jsx";
+import ForgotPassword from "./login/ForgotPassword.jsx";
 import { Container } from "react-bootstrap";
 import AuthProvider from "../context/authContext.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ const App = () => {
                             <Route exact path="/" element={<SignUp />} />
                             <Route path="/signin" element={<SignIn />} />
                             <Route path="/dashboard" element={<Dashboard />}/>
+                            <Route path="/forgot-password" element={<ForgotPassword />}/>
                         </Routes>
                     </AuthProvider>
                 </Router>

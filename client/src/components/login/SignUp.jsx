@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../context/authContext.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
 
@@ -47,6 +47,9 @@ const SignUp = () => {
                     <p></p>
                     <button>Submit</button>
                 </form>
+                <div>
+                    <Link to="/forgot-password">Forgot Password?</Link>
+                </div>
             </div>
             <div>
                 Already have an account? <Link to="/signin">Sign In</Link>

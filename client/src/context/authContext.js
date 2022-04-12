@@ -29,10 +29,15 @@ const AuthProvider = ({ children }) => {
         return auth.signInWithEmailAndPassword(email, password);
     }
 
+    const signOut = () => {
+        return auth.signOut();
+    }
+
     const value = {
         currentUser,
         signUp,
-        signIn
+        signIn,
+        signOut
     }
 
     return (
