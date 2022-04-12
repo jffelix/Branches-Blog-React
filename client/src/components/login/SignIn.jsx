@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../context/authContext.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
 
@@ -10,19 +10,16 @@ const SignIn = () => {
     const { signIn } = useAuth();
     const [ error, setError ] = useState("");
     const [ loading, setLoading ] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // if (passwordRef.current.value.length === 0) {
-        //     setError("Please input a password");
-        //     return;
-        // }
 
         try {
             setError("");
             setLoading(true);
             await signIn(emailRef.current.value, passwordRef.current.value);
+            navigate("/dashboard", { replace: true });
         } catch {
             setError("Failed to sign in");
         }
