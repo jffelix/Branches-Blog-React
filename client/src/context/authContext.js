@@ -25,9 +25,14 @@ const AuthProvider = ({ children }) => {
         return auth.createUserWithEmailAndPassword(email, password);
     }
 
+    const signIn = (email, password) => {
+        return auth.signInWithEmailAndPassword(email, password);
+    }
+
     const value = {
         currentUser,
-        signUp
+        signUp,
+        signIn
     }
 
     return (

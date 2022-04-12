@@ -7,25 +7,24 @@ const SignIn = () => {
 
     const emailRef = useRef();
     const passwordRef = useRef();
-    const confirmPasswordRef = useRef();
-    const { signUp } = useAuth();
+    const { signIn } = useAuth();
     const [ error, setError ] = useState("");
     const [ loading, setLoading ] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (passwordRef.current.value !== confirmPasswordRef.current.value) {
-            setError("Passwords do not match");
-            return;
-        }
+        // if (passwordRef.current.value.length === 0) {
+        //     setError("Please input a password");
+        //     return;
+        // }
 
         try {
             setError("");
             setLoading(true);
-            signUp(emailRef.current.value, passwordRef.current.value);
+            await signIn(emailRef.current.value, passwordRef.current.value);
         } catch {
-            setError("Failed to create an account");
+            setError("Failed to sign in");
         }
         setLoading(false);
     } 
