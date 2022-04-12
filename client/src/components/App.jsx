@@ -1,16 +1,18 @@
 import React from "react";
 import SignIn from "./login/SignIn.jsx";
 import SignUp from "./login/SignUp.jsx";
-import SignUp2 from "./login/SignUp2.jsx";
+import { Container } from "react-bootstrap";
+import AuthProvider from "../context/authContext.js";
 
 const App = () => {
 
     return (
         <div>
-            <h1>Branches Blog</h1>
-            <div>
-                <SignUp />
-            </div>
+            <AuthProvider>
+                <Container>
+                    <SignUp />
+                </Container>
+            </AuthProvider>
         </div>
     )
 }
