@@ -8,7 +8,7 @@ const signUp = async (req, res) => {
 
       if (!user.length) {
         const user = await User.create({ name, email, userId });
-        return res.status(201).send({message: 'New user created.'});
+        return res.status(201).send('New user created.');
       }
       return res.sendStatus(200);
 
