@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const mongoUri = "mongodb://localhost:27017";
+const mongoUri = "mongodb://localhost:27017/Branches";
 
 const db = mongoose.connect(mongoUri, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(() =>
