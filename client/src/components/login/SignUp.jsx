@@ -29,7 +29,22 @@ const SignUp = () => {
             setLoading(true);
             await signUp(emailRef.current.value, passwordRef.current.value);
 
-            // axios post request to "/signup" endpoint
+            // axios request code
+
+            let signUpObj = {
+                username: userName,
+                email: emailRef.current.value
+            }
+    
+            console.log("signUpObj: ", signUpObj);
+
+            axios.post("/signup", signUpObj)
+            .then(() => {
+                console.log("Successfully connected from Axios POST request!");
+            })
+            .catch(err => {
+                console.log(err);
+            });
 
             navigate("/dashboard", { replace: true });
         } catch {
