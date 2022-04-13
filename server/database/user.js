@@ -6,10 +6,10 @@ const userSchema = new mongoose.Schema({
     },
     email: {
         type: String
-    },
-    userId: {
-        type: Number
     }
+    // userId: {
+    //     type: Number
+    // }
 });
 
 var userItem = mongoose.model("User", userSchema);
