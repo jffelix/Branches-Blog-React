@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+// Do not use until Post schema is functional
+
 const commentSchema = new mongoose.Schema({
     username: {
         type: String
