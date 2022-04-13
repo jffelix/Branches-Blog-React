@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
-const postSchema = new mongoose.Schema({
+const commentSchema = new mongoose.Schema({
     username: {
         type: String
     },
-    blog: {
+    comment: {
         type: String
     },
     timeStamp: {
@@ -18,6 +18,6 @@ const postSchema = new mongoose.Schema({
     }
 });
 
-var postItem = mongoose.model("Post", postSchema);
+var commentItem = mongoose.model("Post", commentSchema);
 
-module.exports = postItem;
+module.exports = commentItem;
