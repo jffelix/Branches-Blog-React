@@ -29,14 +29,11 @@ const SignUp = () => {
             setLoading(true);
             await signUp(emailRef.current.value, passwordRef.current.value);
 
-            // axios request code
-
+            // axios request code below
             let signUpObj = {
                 username: userName,
                 email: emailRef.current.value
             }
-    
-            console.log("signUpObj: ", signUpObj);
 
             axios.post("/signup", signUpObj)
             .then(() => {
@@ -45,6 +42,7 @@ const SignUp = () => {
             .catch(err => {
                 console.log(err);
             });
+            // axios request code above
 
             navigate("/dashboard", { replace: true });
         } catch {

@@ -4,6 +4,12 @@ const signUp = async (req, res) => {
 
     const { username, email } = req.body;
 
+    // create database
+      // add user to database
+
+
+
+
     // try {
     //   const user = await User.find({email});
 
