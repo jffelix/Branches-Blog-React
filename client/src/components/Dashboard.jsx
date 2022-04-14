@@ -48,7 +48,8 @@ const Dashboard = () => {
     }
 
     // turn into async function later
-    const submitNewPost = () => {
+    const submitNewPost = (e) => {
+        e.preventDefault();
         console.log("Hello from submitNewPost!");
     }
 
@@ -59,7 +60,7 @@ const Dashboard = () => {
             <div className="createPost">
                 <h2>Create New Post</h2>
                 <p>Type what you're thinking . . .</p>
-                <form onSubmit={submitNewPost}>
+                <form onSubmit={(e) => submitNewPost(e)}>
                     <input />
                     <p></p>
                     <button>Post</button>
