@@ -1,5 +1,14 @@
 const Post = require("../database/post.js");
 
+const getAllPosts = async (req, res) => {
+    try {
+        const posts = await Post.find();
+        return res.status(200).send(posts);
+    } catch {
+        return res.status(400).send("Error while fetching posts");
+    }
+}
+
 const createNewPost = async (req, res) => {
 
     const postObj = req.body;
@@ -17,5 +26,6 @@ const createNewPost = async (req, res) => {
 }
 
 module.exports = {
-    createNewPost
+    createNewPost,
+    getAllPosts
 }
