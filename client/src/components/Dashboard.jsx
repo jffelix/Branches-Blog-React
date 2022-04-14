@@ -12,6 +12,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         getUsername();
+        getAllBlogs();
     }, []);
 
     const [ error, setError ] = useState("");
