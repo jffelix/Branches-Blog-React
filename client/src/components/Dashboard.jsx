@@ -23,6 +23,9 @@ const Dashboard = () => {
         }
     }
 
+    // Username Approach #2
+    // getUsername function
+
     return (
         <div>
             <h3>Welcome {currentUser.email}</h3>
