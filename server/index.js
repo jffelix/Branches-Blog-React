@@ -5,6 +5,8 @@ const path = require("path");
 const app = express();
 const port = 3001;
 
+const db = require("./database/index.js");
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(cors());
