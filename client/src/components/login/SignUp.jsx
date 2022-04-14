@@ -9,10 +9,6 @@ const SignUp = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
     const confirmPasswordRef = useRef();
-    // Username Approach #1
-    // need to send userName to Dashboard.jsx
-    // useRef()?
-        // ref attribute in input tag
     const [ userName, setUserName ] = useState("");
     const { signUp } = useAuth();
     const [ error, setError ] = useState("");

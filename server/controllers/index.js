@@ -21,6 +21,10 @@ const signUp = async (req, res) => {
     }
 };
 
+const getUsername = async (req, res) => {
+  // db.users.find({email: "lofigirl@gmail.com"})
+}
+
 module.exports = {
     signUp
 }

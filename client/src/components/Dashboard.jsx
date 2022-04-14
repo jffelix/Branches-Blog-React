@@ -5,6 +5,7 @@ import { useAuth } from "../context/authContext.js";
 import BlogList from "./sub-components/BlogList.jsx";
 
 import sampleBlogs from "./sampleBlogs";
+import axios from "axios";
 
 const Dashboard = () => {
 
@@ -23,8 +24,14 @@ const Dashboard = () => {
         }
     }
 
-    // Username Approach #2
-    // getUsername function
+    const getUsername = () => {
+        axios.get()
+        .then()
+        .catch(err => {
+            console.log("Error received during Axios GET request.")
+        })
+        // db.users.find({email: "lofigirl@gmail.com"})
+    }
 
     return (
         <div>
