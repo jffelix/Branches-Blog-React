@@ -9,7 +9,7 @@ const BlogListEntry = (props) => {
             <p>{props.blog.username}</p>
             <p>{props.blog.timeStamp}</p>
             <p>Likes: {props.blog.likes}</p>
-            <BlogList comments={props.blog.comments} />
+            {/* <BlogList comments={props.blog.comments} /> */}
         </div>
     )
 }

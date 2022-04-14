@@ -56,6 +56,7 @@ const Dashboard = () => {
         try {
             axios.get("/getPosts")
             .then(response => {
+                setAllBlogs(response.data);
                 console.log("response.data: ", response.data);
             })
             .catch(err => {
@@ -105,7 +106,7 @@ const Dashboard = () => {
             </div>
             <div className="mainFeed">  
                 <h2>Main Feed</h2>
-                <BlogList blogs={sampleBlogs}/>
+                <BlogList blogs={allBlogs}/>
                 {error && <Alert variant="danger">{error}</Alert>}
             </div>
             <div className="logOut">
