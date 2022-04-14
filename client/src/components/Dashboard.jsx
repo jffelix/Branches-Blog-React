@@ -14,6 +14,8 @@ const Dashboard = () => {
     });
 
     const [ error, setError ] = useState("");
+    // will be used for GET request on all posted blogs
+    const [ allBlogs, setAllBlogs ] = useState([]);
     const { currentUser, signOut } = useAuth();
     const [ username, setUsername ] = useState("");
     const navigate = useNavigate();
@@ -30,7 +32,6 @@ const Dashboard = () => {
     }
 
     const getUsername = async () => {
-
         try {
             axios.get(`/signup/${currentUser.email}`)
             .then(response => {
@@ -44,19 +45,32 @@ const Dashboard = () => {
         } catch {
             console.log("Failed to retrieve username.");
         }
-
     }
+
+    // turn into async function later
+    const submitNewPost = () => {
+        console.log("Hello from submitNewPost!");
+    }
+
 
     return (
         <div>
             <h3>Welcome {username}!</h3>
-            <h2>Main Feed</h2>
-            <BlogList blogs={sampleBlogs}/>
-            {error && <Alert variant="danger">{error}</Alert>}
-            <div>
-                <button onClick={getUsername}>Get Username</button>
+            <div className="createPost">
+                <h2>Create New Post</h2>
+                <p>Type what you're thinking . . .</p>
+                <form onSubmit={submitNewPost}>
+                    <input />
+                    <p></p>
+                    <button>Post</button>
+                </form>
             </div>
-            <div>
+            <div className="mainFeed">  
+                <h2>Main Feed</h2>
+                <BlogList blogs={sampleBlogs}/>
+                {error && <Alert variant="danger">{error}</Alert>}
+            </div>
+            <div className="logOut">
                 <button variant="link" onClick={handleLogOut}>Log Out</button>
             </div>
         </div>
