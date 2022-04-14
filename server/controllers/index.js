@@ -6,7 +6,6 @@ const signUp = async (req, res) => {
 
     // create database
       // add user to database
-
     try {
       const user = await User.find({email});
 
@@ -19,12 +18,30 @@ const signUp = async (req, res) => {
     } catch (error) {
       res.status(400).send(error);
     }
+
 };
 
 const getUsername = async (req, res) => {
-  // db.users.find({email: "lofigirl@gmail.com"})
+
+    const emailObj = {
+      email: req.params.id
+    }
+
+    try {
+        const user = await User.find({email: emailObj.email});
+
+        if (user.length === 1) {
+          return res.status(200).send(user);
+        } else {
+          return res.status(400).send("Error while searching for user");
+        }
+
+    } catch {
+      res.status(400).send(error);
+    }
 }
 
 module.exports = {
-    signUp
+    signUp,
+    getUsername
 }
