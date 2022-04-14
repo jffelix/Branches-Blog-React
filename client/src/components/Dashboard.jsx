@@ -82,6 +82,7 @@ const Dashboard = () => {
             axios.post("/createPost", postObj)
             .then(response => {
                 console.log(response.data);
+                getAllBlogs();
             })
             .catch(err => {
                 console.log("Error received while submitting post.", err);
