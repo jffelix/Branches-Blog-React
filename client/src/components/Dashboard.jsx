@@ -83,6 +83,7 @@ const Dashboard = () => {
             .then(response => {
                 console.log(response.data);
                 getAllBlogs();
+                setBlogInput("");
             })
             .catch(err => {
                 console.log("Error received while submitting post.", err);

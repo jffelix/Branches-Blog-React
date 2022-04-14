@@ -20,9 +20,6 @@ const postSchema = new mongoose.Schema({
     likes: {
         type: Number
     }
-    // blogId: {
-    //     type: Number
-    // },
 });
 
 var postItem = mongoose.model("Post", postSchema);
