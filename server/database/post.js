@@ -9,7 +9,7 @@ const postSchema = new mongoose.Schema({
         type: String
     },
     userId: {
-        type: Number
+        type: String
     },
     blog: {
         type: String

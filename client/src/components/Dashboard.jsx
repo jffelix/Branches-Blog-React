@@ -63,12 +63,18 @@ const Dashboard = () => {
             likes: 0
         };
 
-        console.log("postObj: ", postObj);
-
         try {
 
-        } catch {
+            axios.post("/createPost", postObj)
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(err => {
+                console.log("Error received while submitting post.", err);
+            })
 
+        } catch {
+            console.log("Error received during Axios POST request.");
         }
     }
 
