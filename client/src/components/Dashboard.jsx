@@ -5,18 +5,21 @@ import { useAuth } from "../context/authContext.js";
 import BlogList from "./sub-components/BlogList.jsx";
 
 import sampleBlogs from "./sampleBlogs";
+import { DateTime } from "luxon";
 import axios from "axios";
 
 const Dashboard = () => {
 
     useEffect(() => {
         getUsername();
-    });
+    }, []);
 
     const [ error, setError ] = useState("");
     // will be used for GET request on all posted blogs
     const [ allBlogs, setAllBlogs ] = useState([]);
+    const [ blogInput, setBlogInput ] = useState("");
     const { currentUser, signOut } = useAuth();
+    const [ userId, setUserId ] = useState("");
     const [ username, setUsername ] = useState("");
     const navigate = useNavigate();
 
@@ -36,6 +39,7 @@ const Dashboard = () => {
             axios.get(`/signup/${currentUser.email}`)
             .then(response => {
                 console.log("response.data: ", response.data);
+                setUserId(response.data[0]._id);
                 setUsername(response.data[0].username);
             })
             .catch(err => {
@@ -48,9 +52,24 @@ const Dashboard = () => {
     }
 
     // turn into async function later
-    const submitNewPost = (e) => {
+    const submitNewPost = async (e) => {
         e.preventDefault();
-        console.log("Hello from submitNewPost!");
+
+        let postObj = {
+            username: username,
+            userId: userId,
+            blog: blogInput,
+            timeStamp: DateTime.now().toISO(),
+            likes: 0
+        };
+
+        console.log("postObj: ", postObj);
+
+        try {
+
+        } catch {
+
+        }
     }
 
 
@@ -61,7 +80,7 @@ const Dashboard = () => {
                 <h2>Create New Post</h2>
                 <p>Type what you're thinking . . .</p>
                 <form onSubmit={(e) => submitNewPost(e)}>
-                    <input />
+                    <input type="blog" onChange={(e) => setBlogInput(e.target.value)} value={blogInput} />
                     <p></p>
                     <button>Post</button>
                 </form>
