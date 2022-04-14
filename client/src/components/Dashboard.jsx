@@ -38,7 +38,7 @@ const Dashboard = () => {
         try {
             axios.get(`/signup/${currentUser.email}`)
             .then(response => {
-                console.log("response.data: ", response.data);
+                // console.log("response.data: ", response.data);
                 setUserId(response.data[0]._id);
                 setUsername(response.data[0].username);
             })
@@ -51,7 +51,20 @@ const Dashboard = () => {
         }
     }
 
-    // turn into async function later
+    const getAllBlogs = async () => {
+        try {
+            axios.get("/getPosts")
+            .then(response => {
+                console.log("response.data: ", response.data);
+            })
+            .catch(err => {
+                console.log("Error received during Axios GET request", err);
+            })
+        } catch {
+            console.log("Failed to retrieve posts.");
+        }
+    }
+
     const submitNewPost = async (e) => {
         e.preventDefault();
 
