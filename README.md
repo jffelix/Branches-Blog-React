@@ -8,8 +8,10 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - Login will recognize username from email credentials
 - Post blogs
 - Posts include a timestamp
+- Blogs sorted by Most Recent at default
 - Adding comments to blog posts
 
 ## Features In Progress
-- "Like" system
 - My Profile page
+- "Like" system
+- Sort blogs by Most Likes
