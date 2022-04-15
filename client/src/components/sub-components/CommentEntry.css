@@ -1,5 +1,6 @@
 .comments {
-    border-style: solid;
+    border-top: solid;
+    border-bottom: solid;
     margin: 10px 50px;
     font-family: 'Fira Sans', sans-serif;
 }
