@@ -13,6 +13,7 @@
 }
 
 .blog {
+    font-family: 'Comfortaa', cursive;
     font-size: 26px;
     padding: 0 20px;
 }
@@ -20,4 +21,10 @@
 .commentsText p {
     text-align: left;
     padding-left: 10px;
+}
+
+.addComment input {
+    border-style: solid;
+    padding: 10px;
+    width: 50%;
 }
