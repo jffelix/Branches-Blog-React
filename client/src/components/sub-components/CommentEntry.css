@@ -1,7 +1,24 @@
 .comments {
-    background-color: rgb(212, 209, 209);
-    border-top: solid;
-    border-bottom: solid;
+    background-color: rgb(226, 221, 221);
+    border-style: solid;
+    border-radius: 20px;
     margin: 10px 50px;
     font-family: 'Fira Sans', sans-serif;
+}
+
+.commentsUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.commentText p {
+    text-align: left;
+    padding: 0 20px;
+}
+
+.commentLikes p {
+    text-align: right;
+    padding: 0 20px;
 }

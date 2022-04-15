@@ -1,8 +1,8 @@
 .blogs {
     background-color: white;
     border-style: solid;
-    margin: 10px 50px;
     font-family: 'Fira Sans', sans-serif;
+    margin: 10px 50px;
 }
 
 .blogUser {
@@ -14,6 +14,7 @@
 
 .blog {
     font-size: 26px;
+    padding: 0 20px;
 }
 
 .commentsText p {
