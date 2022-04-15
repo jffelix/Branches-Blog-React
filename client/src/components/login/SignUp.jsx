@@ -51,28 +51,33 @@ const SignUp = () => {
     } 
 
     return (
-        <div className="signUp">
-            <div>
-                <h2>Sign Up</h2>
-                {error && <Alert variant="danger">{error}</Alert>}
-                <form onSubmit={(e) => handleSubmit(e)}>
-                    <p>Username</p>
-                    <input type="username" onChange={(e) => setUserName(e.target.value)} value={userName} />
-                    <p>Email</p>
-                    <input type="email" ref={emailRef} required />
-                    <p>Password</p>
-                    <input type="password" ref={passwordRef} required />
-                    <p>Confirm Password</p>
-                    <input type="password" ref={confirmPasswordRef}/>
-                    <p></p>
-                    <button>Submit</button>
-                </form>
-                <div>
-                    <Link to="/forgot-password">Forgot Password?</Link>
-                </div>
+        <div>
+            <div className="mainTitle">
+                <h1>Branches Blog</h1>
             </div>
-            <div>
-                Already have an account? <Link to="/signin">Sign In</Link>
+            <div className="signUp">
+                <div>
+                    <h2>Sign Up</h2>
+                    {error && <Alert variant="danger">{error}</Alert>}
+                    <form onSubmit={(e) => handleSubmit(e)}>
+                        <p>Username</p>
+                        <input type="username" onChange={(e) => setUserName(e.target.value)} value={userName} />
+                        <p>Email</p>
+                        <input type="email" ref={emailRef} required />
+                        <p>Password</p>
+                        <input type="password" ref={passwordRef} required />
+                        <p>Confirm Password</p>
+                        <input type="password" ref={confirmPasswordRef}/>
+                        <p></p>
+                        <button>Submit</button>
+                    </form>
+                    <div>
+                        <Link to="/forgot-password">Forgot Password?</Link>
+                    </div>
+                </div>
+                <div>
+                    Already have an account? <Link to="/signin">Sign In</Link>
+                </div>
             </div>
         </div>
     )

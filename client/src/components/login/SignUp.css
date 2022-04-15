@@ -2,8 +2,14 @@ body {
     background-color: rgb(201, 248, 201);
 }
 
+.mainTitle {
+    text-align: center;
+    margin-top: 50px;
+}
+
 .signUp {
     background-color: rgba(252, 231, 192, 0.856);
+    font-family: 'Fira Sans', sans-serif;
     border-style: solid;
     border-color: rgb(199, 149, 91);
     border-width: thick;
