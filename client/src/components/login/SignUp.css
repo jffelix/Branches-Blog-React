@@ -27,3 +27,17 @@ body {
     margin: 50px 200px;
     padding: 30px;
 }
+
+.signUp input {
+    border-style: none;
+    padding: 10px;
+    width: 50%;
+}
+
+.signUp button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(199, 149, 91);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 10px;
+}
