@@ -53,7 +53,10 @@ const SignUp = () => {
     return (
         <div>
             <div className="mainTitle">
-                <h1>Branches Blog</h1>
+                <h1>Branches</h1>
+            </div>
+            <div className="subTitle">
+                <p>Making connections. For everyone!</p>
             </div>
             <div className="signUp">
                 <div>
