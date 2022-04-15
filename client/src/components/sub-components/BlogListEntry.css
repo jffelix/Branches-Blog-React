@@ -4,3 +4,14 @@
     margin: 10px 50px;
     font-family: 'Fira Sans', sans-serif;
 }
+
+.blogUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.blog {
+    font-size: 22px;
+}

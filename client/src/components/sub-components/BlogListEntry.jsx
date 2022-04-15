@@ -32,10 +32,20 @@ const BlogListEntry = (props) => {
 
     return (
         <div className="blogs">
-            <h4>{props.blog.blog}</h4>
-            <p>{props.blog.username}</p>
-            <p>{props.blog.timeStamp}</p>
-            <p>Likes: {props.blog.likes}</p>
+            <div className="blogUser">
+                <div>
+                    <p>{props.blog.username}</p>
+                </div>
+                <div>
+                    <p>{props.blog.timeStamp}</p>
+                </div>
+            </div>
+            <div className="blog">
+                <h4>{props.blog.blog}</h4>
+            </div>
+            <div className="blogLikes">
+                <p>Likes: {props.blog.likes}</p>
+            </div>
             <div className="comments">
                 <p>Comments</p>
                 <BlogList comments={props.blog.comments} />
