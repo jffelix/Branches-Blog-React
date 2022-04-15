@@ -10,9 +10,12 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - Posts include a timestamp
 - Blogs sorted by Most Recent at default
 - Adding comments to blog posts
+- Comments are sorted by oldest post
 
 ## Features In Progress
+- Edit posts/comments
+- Delete posts/comments
 - My Profile page
-- Forgot Password feature
 - "Like" system
 - Sort blogs by Most Likes
+- Forgot Password feature
