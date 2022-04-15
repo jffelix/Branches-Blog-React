@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../context/authContext.js";
 import { Link, useNavigate } from "react-router-dom";
+import "./SignIn.css";
 
 const SignIn = () => {
 
@@ -27,19 +28,17 @@ const SignIn = () => {
     } 
 
     return (
-        <div>
-            <div>
-                <h2>Log In</h2>
-                {error && <Alert variant="danger">{error}</Alert>}
-                <form onSubmit={(e) => handleSubmit(e)}>
-                    <p>Email</p>
-                    <input type="email" ref={emailRef} required />
-                    <p>Password</p>
-                    <input type="password" ref={passwordRef} required />
-                    <p></p>
-                    <button>Log In</button>
-                </form>
-            </div>
+        <div className="signIn">
+            <h2>Log In</h2>
+            {error && <Alert variant="danger">{error}</Alert>}
+            <form onSubmit={(e) => handleSubmit(e)}>
+                <p>Email</p>
+                <input type="email" ref={emailRef} required />
+                <p>Password</p>
+                <input type="password" ref={passwordRef} required />
+                <p></p>
+                <button>Log In</button>
+            </form>
             <div>
                 Don't have an account? <Link to="/">Sign Up</Link>
             </div>

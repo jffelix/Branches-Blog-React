@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(201, 248, 201);
+}
+
+.signIn {
+    background-color: rgba(252, 231, 192, 0.856);
+    font-family: 'Fira Sans', sans-serif;
+    border-style: solid;
+    border-color: rgb(199, 149, 91);
+    border-width: thick;
+    border-radius: 20px;
+    text-align: center;
+    margin: 50px 200px;
+    padding: 30px;
+}
+
+.signIn input {
+    border-style: none;
+    padding: 10px;
+    width: 50%;
+}
+
+.signIn button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(199, 149, 91);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 10px;
+}
