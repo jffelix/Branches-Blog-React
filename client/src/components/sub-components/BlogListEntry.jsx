@@ -47,6 +47,14 @@ const BlogListEntry = (props) => {
             <div className="blogLikes">
                 <p>Likes: {props.blog.likes}</p>
             </div>
+            <div className="updateDeletePost">
+                <div className="updatePost">
+                    <button>Edit Post</button>
+                </div>
+                <div className="deletePost">
+                    <button>Delete Post</button>
+                </div>
+            </div>
             <div className="commentsText">
                 <p>Comments</p>
             </div>
