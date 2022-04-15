@@ -5,7 +5,7 @@ const userItem = require("../database/user.js");
 
 const addComment = async (req, res) => {
     const postObj = req.body;
-    console.log("req.body: ", req.body);
+    console.log("postObj: ", postObj);
 
     try {
         const post = await Post.find({postId: postObj.postId});
@@ -17,7 +17,7 @@ const addComment = async (req, res) => {
             },
             {
                 "$push": {
-                    comments: req.body
+                    comments: postObj
                 }
             })
         }
