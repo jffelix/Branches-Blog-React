@@ -32,8 +32,6 @@ const BlogList = (props) => {
             </div>
         )
     }
-
-
 }
 
 export default BlogList;

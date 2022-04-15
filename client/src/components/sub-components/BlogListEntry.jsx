@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import BlogList from "./BlogList.jsx";
-// import CommentList from "./CommentList.jsx";
 import { DateTime } from "luxon";
 
 const BlogListEntry = (props) => {
@@ -25,6 +24,7 @@ const BlogListEntry = (props) => {
         .then(response => {
             console.log("Succesfully connected with Axios POST request!");
             props.getAllBlogs();
+            setCommentInput("");
         })
         .catch(err => {
             console.log("Error received during Axios POST request", err);
