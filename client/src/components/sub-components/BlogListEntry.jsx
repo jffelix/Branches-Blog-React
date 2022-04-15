@@ -47,7 +47,9 @@ const BlogListEntry = (props) => {
                 <p>Likes: {props.blog.likes}</p>
             </div>
             <div className="comments">
-                <p>Comments</p>
+                <div className="commentsText">
+                    <p>Comments</p>
+                </div>
                 <BlogList comments={props.blog.comments} />
             </div>
             <div className="addComment">

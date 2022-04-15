@@ -13,5 +13,10 @@
 }
 
 .blog {
-    font-size: 22px;
+    font-size: 26px;
+}
+
+.commentsText p {
+    text-align: left;
+    padding-left: 10px;
 }
