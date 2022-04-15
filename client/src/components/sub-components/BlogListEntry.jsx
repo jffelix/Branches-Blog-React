@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import BlogList from "./BlogList.jsx";
 import { DateTime } from "luxon";
+import "./BlogListEntry.css";
 
 const BlogListEntry = (props) => {
 
@@ -30,7 +31,7 @@ const BlogListEntry = (props) => {
     }
 
     return (
-        <div>
+        <div className="blogs">
             <h4>{props.blog.blog}</h4>
             <p>{props.blog.username}</p>
             <p>{props.blog.timeStamp}</p>
