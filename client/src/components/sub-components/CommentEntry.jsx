@@ -26,14 +26,19 @@ const CommentEntry = (props) => {
             <div className="commentLikes">
                 <p>Likes: {props.comment.likes}</p>
             </div>
-            <div className="updateDeleteComment">
-                <div className="updateComment">
-                    <button>Edit Comment</button>
+            {
+                props.comment.username === props.username ?
+                <div className="updateDeleteComment">
+                    <div className="updateComment">
+                        <button>Edit Comment</button>
+                    </div>
+                    <div className="deleteComment">
+                        <button onClick={deleteComment}>Delete Comment</button>
+                    </div>
                 </div>
-                <div className="deleteComment">
-                    <button onClick={deleteComment}>Delete Comment</button>
-                </div>
-            </div>
+                :
+                null
+            }
         </div>
     )
 }

@@ -46,7 +46,7 @@
 
 .deleteComment button {
     border-style: solid;
-    color: rgb(145, 140, 140);
+    color: white;
     background-color: rgb(241, 156, 134);
     font-family: 'Fira Sans', sans-serif;
     padding: 4px;
