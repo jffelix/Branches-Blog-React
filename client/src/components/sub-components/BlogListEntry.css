@@ -28,3 +28,16 @@
     padding: 10px;
     width: 50%;
 }
+
+.addComment button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(199, 149, 91);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 12px;
+}
+
+.addCommentText p {
+    text-align: left;
+    padding-left: 60px;
+}

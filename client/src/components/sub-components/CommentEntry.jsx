@@ -4,7 +4,7 @@ import "./CommentEntry.css";
 const CommentEntry = (props) => {
 
     return (
-        <div className="comments">
+        <div className="commentsEntry">
             <div className="commentsUser">
                 <div>
                     <p>{props.comment.username}</p>

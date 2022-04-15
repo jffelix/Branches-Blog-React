@@ -46,14 +46,16 @@ const BlogListEntry = (props) => {
             <div className="blogLikes">
                 <p>Likes: {props.blog.likes}</p>
             </div>
+            <div className="commentsText">
+                <p>Comments</p>
+            </div>
             <div className="comments">
-                <div className="commentsText">
-                    <p>Comments</p>
-                </div>
                 <BlogList comments={props.blog.comments} />
             </div>
             <div className="addComment">
-                <p>Add Comment</p>
+                <div className="addCommentText">
+                    <p>Add Comment</p>
+                </div>
                 <form onSubmit={(e) => submitComment(e)}>
                     <input type="comment" onChange={(e) => setCommentInput(e.target.value)} value={commentInput} />
                     <p></p>
