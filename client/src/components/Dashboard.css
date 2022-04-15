@@ -1,0 +1,17 @@
+.dashboard {
+    text-align: center;
+}
+
+.createPost {
+    border-style: solid;
+    margin: 10px 100px;
+}
+
+.mainFeed {
+    border-style: solid;
+    margin: 10px 100px;
+}
+
+.logOut {
+    text-align: right;
+}

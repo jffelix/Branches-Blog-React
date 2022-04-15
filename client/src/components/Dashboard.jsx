@@ -5,6 +5,7 @@ import { useAuth } from "../context/authContext.js";
 import BlogList from "./sub-components/BlogList.jsx";
 import { DateTime } from "luxon";
 import axios from "axios";
+import "./Dashboard.css";
 
 const Dashboard = () => {
 
@@ -91,7 +92,10 @@ const Dashboard = () => {
     }
 
     return (
-        <div>
+        <div className="dashboard">
+            <div className="logOut">
+                <button variant="link" onClick={handleLogOut}>Log Out</button>
+            </div>
             <h3>Welcome {username}!</h3>
             <div className="createPost">
                 <h2>Create New Post</h2>
@@ -110,9 +114,6 @@ const Dashboard = () => {
                     getAllBlogs={getAllBlogs}
                 />
                 {error && <Alert variant="danger">{error}</Alert>}
-            </div>
-            <div className="logOut">
-                <button variant="link" onClick={handleLogOut}>Log Out</button>
             </div>
         </div>
     )
