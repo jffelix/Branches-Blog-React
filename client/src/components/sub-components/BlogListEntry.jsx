@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import BlogList from "./BlogList.jsx";
+import { DateTime } from "luxon";
 
 const BlogListEntry = (props) => {
 
@@ -12,6 +13,8 @@ const BlogListEntry = (props) => {
         let commentObj = {
             username: props.blog.username,
             comment: commentInput,
+            timeStamp: DateTime.now().toISO(),
+            likes: 0,
             postId: props.blog._id
         }
 
