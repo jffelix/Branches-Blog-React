@@ -7,6 +7,7 @@ import "./BlogListEntry.css";
 const BlogListEntry = (props) => {
 
     const [ commentInput, setCommentInput] = useState("");
+    const convertedTime = DateTime.fromISO(props.blog.timeStamp).toRelative();
 
     const submitComment = (e) => {
         e.preventDefault();
@@ -37,7 +38,7 @@ const BlogListEntry = (props) => {
                     <p>{props.blog.username}</p>
                 </div>
                 <div>
-                    <p>{props.blog.timeStamp}</p>
+                    <p>{convertedTime}</p>
                 </div>
             </div>
             <div className="blog">

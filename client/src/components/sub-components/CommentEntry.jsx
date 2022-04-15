@@ -1,7 +1,10 @@
 import React from "react";
+import { DateTime } from "luxon";
 import "./CommentEntry.css";
 
 const CommentEntry = (props) => {
+
+    const convertedTime = DateTime.fromISO(props.comment.timeStamp).toRelative();
 
     return (
         <div className="commentsEntry">
@@ -10,7 +13,7 @@ const CommentEntry = (props) => {
                     <p>{props.comment.username}</p>
                 </div>
                 <div>
-                    <p>{props.comment.timeStamp}</p>
+                    <p>{convertedTime}</p>
                 </div>
             </div>
             <div className="commentText">
