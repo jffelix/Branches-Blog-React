@@ -3,8 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { Alert } from "react-bootstrap";
 import { useAuth } from "../context/authContext.js";
 import BlogList from "./sub-components/BlogList.jsx";
-
-import sampleBlogs from "./sampleBlogs";
 import { DateTime } from "luxon";
 import axios from "axios";
 
