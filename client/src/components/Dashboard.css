@@ -1,5 +1,6 @@
 .dashboard {
     text-align: center;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 .createPost {
@@ -12,6 +13,20 @@
     margin: 10px 100px;
 }
 
+.profileLink {
+    text-align: right;
+    padding-right: 10px;
+}
+
 .logOut {
     text-align: right;
+    padding-right: 10px;
+}
+
+.logOut button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(199, 149, 91);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 6px;
 }

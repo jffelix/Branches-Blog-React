@@ -93,10 +93,12 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard">
+            <div className="profileLink">
+                <h3>Welcome, {username}</h3>
+            </div>
             <div className="logOut">
                 <button variant="link" onClick={handleLogOut}>Log Out</button>
             </div>
-            <h3>Welcome {username}!</h3>
             <div className="createPost">
                 <h2>Create New Post</h2>
                 <p>Type what you're thinking . . .</p>
