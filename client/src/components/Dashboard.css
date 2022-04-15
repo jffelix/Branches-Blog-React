@@ -5,12 +5,36 @@
 
 .createPost {
     border-style: solid;
-    margin: 10px 100px;
+    margin: 10px 130px;
+}
+
+.createPost h2 {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.createPost input {
+    border-style: solid;
+    padding: 10px;
+    width: 80%;
+}
+
+.createPost button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(199, 149, 91);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 14px;
 }
 
 .mainFeed {
     border-style: solid;
     margin: 10px 100px;
+}
+
+.mainFeed h2 {
+    text-align: left;
+    padding-left: 40px;
 }
 
 .profileLink {
