@@ -106,7 +106,7 @@ const Dashboard = () => {
             </div>
             <div className="mainFeed">  
                 <h2>Main Feed</h2>
-                <BlogList blogs={allBlogs}/>
+                <BlogList username={username} blogs={allBlogs}/>
                 {error && <Alert variant="danger">{error}</Alert>}
             </div>
             <div className="logOut">

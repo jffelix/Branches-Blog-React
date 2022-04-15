@@ -1,6 +1,7 @@
 import React from "react";
 
 const CommentEntry = (props) => {
+
     return (
         <div>
             <p>{props.comment.username}</p>

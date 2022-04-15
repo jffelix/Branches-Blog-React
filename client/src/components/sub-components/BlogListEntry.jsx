@@ -11,12 +11,15 @@ const BlogListEntry = (props) => {
         e.preventDefault();
 
         let commentObj = {
-            username: props.blog.username,
+            // post username is shown, not the commenter username
+            username: props.username,
             comment: commentInput,
             timeStamp: DateTime.now().toISO(),
             likes: 0,
             postId: props.blog._id
         }
+
+        // console.log("commentObj: ", commentObj);
 
         axios.post("/createComment", commentObj)
         .then(response => {

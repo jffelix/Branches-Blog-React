@@ -9,7 +9,11 @@ const BlogList = (props) => {
         return (
             <div>
                 {props.blogs.map((blog, index) =>
-                    <BlogListEntry blog={blog} key={index} />
+                    <BlogListEntry 
+                        blog={blog} 
+                        key={index} 
+                        username={props.username}
+                    />
                 )}
             </div>
         )
@@ -18,7 +22,11 @@ const BlogList = (props) => {
         return (
             <div>
                 {props.comments.map((comment, index) => 
-                    <CommentEntry comment={comment} key={index}/>
+                    <CommentEntry 
+                        comment={comment} 
+                        key={index}
+                        username={props.username}
+                    />
                 )}
             </div>
         )
