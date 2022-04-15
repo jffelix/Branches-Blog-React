@@ -16,7 +16,6 @@ const Dashboard = () => {
     }, []);
 
     const [ error, setError ] = useState("");
-    // will be used for GET request on all posted blogs
     const [ allBlogs, setAllBlogs ] = useState([]);
     const [ blogInput, setBlogInput ] = useState("");
     const { currentUser, signOut } = useAuth();
