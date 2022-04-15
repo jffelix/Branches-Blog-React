@@ -22,11 +22,13 @@ const createNewPost = async (req, res) => {
 }
 
 const deletePost = async (req, res) => {
-
     const postId = req.params.id;
-    console.log("postId: ", postId);
+    // console.log("postId: ", postId);
 
-    // const post = await Post.find()
+    const post = await Post.find({_id: postId});
+    if (post.length === 1) {
+        console.log("post: ", post);
+    }
 }
 
 module.exports = {
