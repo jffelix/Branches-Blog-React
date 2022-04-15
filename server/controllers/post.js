@@ -12,7 +12,7 @@ const getAllPosts = async (req, res) => {
 const createNewPost = async (req, res) => {
 
     const postObj = req.body;
-    console.log("req.body: ", req.body);
+    // console.log("req.body: ", req.body);
 
     try {
 

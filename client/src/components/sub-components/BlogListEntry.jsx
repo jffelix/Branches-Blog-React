@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import BlogList from "./BlogList.jsx";
 
 const BlogListEntry = (props) => {
@@ -8,7 +9,13 @@ const BlogListEntry = (props) => {
     const submitComment = (e) => {
         e.preventDefault();
 
-        console.log("commentInput: ", commentInput);
+        let commentObj = {
+            username: props.blog.username,
+            comment: commentInput,
+            postId: props.blog._id
+        }
+
+        console.log("commentObj: ", commentObj);
     }
 
     return (
