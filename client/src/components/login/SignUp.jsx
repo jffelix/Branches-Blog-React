@@ -3,6 +3,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../context/authContext.js";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./SignUp.css";
 
 const SignUp = () => {
 
@@ -50,7 +51,7 @@ const SignUp = () => {
     } 
 
     return (
-        <div>
+        <div className="signUp">
             <div>
                 <h2>Sign Up</h2>
                 {error && <Alert variant="danger">{error}</Alert>}
