@@ -13,6 +13,7 @@ const BlogList = (props) => {
                         blog={blog} 
                         key={index} 
                         username={props.username}
+                        getAllBlogs={props.getAllBlogs}
                     />
                 )}
             </div>

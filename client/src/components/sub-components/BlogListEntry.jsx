@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import BlogList from "./BlogList.jsx";
+// import CommentList from "./CommentList.jsx";
 import { DateTime } from "luxon";
 
 const BlogListEntry = (props) => {
@@ -11,7 +12,6 @@ const BlogListEntry = (props) => {
         e.preventDefault();
 
         let commentObj = {
-            // post username is shown, not the commenter username
             username: props.username,
             comment: commentInput,
             timeStamp: DateTime.now().toISO(),
@@ -24,6 +24,7 @@ const BlogListEntry = (props) => {
         axios.post("/createComment", commentObj)
         .then(response => {
             console.log("Succesfully connected with Axios POST request!");
+            props.getAllBlogs();
         })
         .catch(err => {
             console.log("Error received during Axios POST request", err);

@@ -8,12 +8,12 @@ const addComment = async (req, res) => {
     console.log("postObj: ", postObj);
 
     try {
-        const post = await Post.find({postId: postObj.postId});
+        const post = await Post.find({_id: postObj.postId});
         console.log("post: ", post);
 
-        if (post.length) {
+        if (post.length === 1) {
             const post = await Post.findOneAndUpdate({
-                postId: postObj.postId
+                _id: postObj.postId
             },
             {
                 "$push": {
@@ -21,6 +21,8 @@ const addComment = async (req, res) => {
                 }
             })
         }
+
+        return res.status(200).send("Comment submitted!");
 
     } catch {
         return res.status(400).send("Error while creating new comment.");
