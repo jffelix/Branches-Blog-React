@@ -15,7 +15,13 @@ const BlogListEntry = (props) => {
             postId: props.blog._id
         }
 
-        console.log("commentObj: ", commentObj);
+        axios.post("/createComment", commentObj)
+        .then(response => {
+            console.log("Succesfully connected with Axios POST request!");
+        })
+        .catch(err => {
+            console.log("Error received during Axios POST request", err);
+        })
     }
 
     return (
