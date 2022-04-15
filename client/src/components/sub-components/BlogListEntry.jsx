@@ -31,6 +31,20 @@ const BlogListEntry = (props) => {
         })
     }
 
+    const deletePost = () => {
+
+        const selectedPostId = props.blog._id;
+        
+        axios.delete(`/deletePost/${selectedPostId}`)
+        .then(response => {
+            console.log("Successfully connected with Axios DELETE request!");
+        })
+        .catch(err => {
+            console.log("Error received during Axios DELETE request.", err);
+        })
+
+    }
+
     return (
         <div className="blogs">
             <div className="blogUser">
@@ -52,7 +66,7 @@ const BlogListEntry = (props) => {
                     <button>Edit Post</button>
                 </div>
                 <div className="deletePost">
-                    <button>Delete Post</button>
+                    <button onClick={deletePost}>Delete Post</button>
                 </div>
             </div>
             <div className="commentsText">

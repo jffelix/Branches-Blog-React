@@ -8,5 +8,6 @@ router.get("/getPosts", postControllers.getAllPosts);
 router.post("/signup", controllers.signUp);
 router.post("/createPost", postControllers.createNewPost);
 router.post("/createComment", commentControllers.addComment);
+router.delete("/deletePost/:id", postControllers.deletePost);
 
 module.exports = router;

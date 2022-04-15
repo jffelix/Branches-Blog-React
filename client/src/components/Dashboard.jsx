@@ -106,7 +106,7 @@ const Dashboard = () => {
         })
 
         const sortedArray = filteredCopy.map((x) => x[0]);
-        // console.log("sortedArray: ", sortedArray);
+        console.log("sortedArray: ", sortedArray);
         setSortedBlogs(sortedArray);
     }
 

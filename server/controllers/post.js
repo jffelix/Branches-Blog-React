@@ -21,7 +21,16 @@ const createNewPost = async (req, res) => {
     }
 }
 
+const deletePost = async (req, res) => {
+
+    const postId = req.params.id;
+    console.log("postId: ", postId);
+
+    // const post = await Post.find()
+}
+
 module.exports = {
     createNewPost,
-    getAllPosts
+    getAllPosts,
+    deletePost
 }
