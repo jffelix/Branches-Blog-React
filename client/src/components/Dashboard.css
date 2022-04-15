@@ -4,6 +4,7 @@
 }
 
 .createPost {
+    background-color: rgba(252, 231, 192, 0.856); 
     border-style: solid;
     margin: 10px 130px;
 }
@@ -28,6 +29,7 @@
 }
 
 .mainFeed {
+    background-color: rgba(252, 231, 192, 0.856); 
     border-style: solid;
     margin: 10px 100px;
 }
