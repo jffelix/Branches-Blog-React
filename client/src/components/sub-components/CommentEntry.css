@@ -22,3 +22,34 @@
     text-align: right;
     padding: 0 20px;
 }
+
+.updateDeleteComment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.updateComment button {
+    border-style: solid;
+    color: rgb(145, 140, 140);
+    background-color: rgb(237, 245, 164);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 4px;
+    margin: 4px 10px;
+}
+
+.deleteComment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.deleteComment button {
+    border-style: solid;
+    color: rgb(145, 140, 140);
+    background-color: rgb(241, 156, 134);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 4px;
+    margin: 4px 10px;
+}
+

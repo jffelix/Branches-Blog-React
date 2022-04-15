@@ -6,6 +6,10 @@ const CommentEntry = (props) => {
 
     const convertedTime = DateTime.fromISO(props.comment.timeStamp).toRelative();
 
+    const deleteComment = () => {
+        console.log("Hello from deleteComment!");
+    }
+
     return (
         <div className="commentsEntry">
             <div className="commentsUser">
@@ -21,6 +25,14 @@ const CommentEntry = (props) => {
             </div>
             <div className="commentLikes">
                 <p>Likes: {props.comment.likes}</p>
+            </div>
+            <div className="updateDeleteComment">
+                <div className="updateComment">
+                    <button>Edit Comment</button>
+                </div>
+                <div className="deleteComment">
+                    <button onClick={deleteComment}>Delete Comment</button>
+                </div>
             </div>
         </div>
     )
