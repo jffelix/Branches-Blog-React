@@ -20,7 +20,7 @@ const signUp = async (req, res) => {
 const getUsername = async (req, res) => {
     // for some reason email property makes all letter lowercase
       // ex: testaccount becomes "testaccount"
-    // accounts using camelCase usernames return empty usernames
+    // usernames and emails with uppercase letters will return empty usernames
     const emailObj = {
       email: req.params.id
     }
