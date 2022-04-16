@@ -70,6 +70,11 @@ const Dashboard = () => {
     const submitNewPost = async (e) => {
         e.preventDefault();
 
+        if (blogInput.length === 0) {
+            alert("Input field cannot be empty.")
+            return;
+        }
+
         let postObj = {
             username: username,
             userId: userId,
