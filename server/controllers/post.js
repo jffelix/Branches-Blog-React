@@ -21,6 +21,13 @@ const createNewPost = async (req, res) => {
     }
 }
 
+const updatePost = async = (req, res) => {
+    const postId = req.params.id;
+    const updateObj = req.body;
+    console.log("postId: ", postId);
+    console.log("updateObj: ", updateObj);
+}
+
 const deletePost = async (req, res) => {
     const postId = req.params.id;
     // console.log("postId: ", postId);
@@ -41,5 +48,6 @@ const deletePost = async (req, res) => {
 module.exports = {
     createNewPost,
     getAllPosts,
+    updatePost,
     deletePost
 }
