@@ -8,6 +8,7 @@ const BlogListEntry = (props) => {
 
     const [ commentInput, setCommentInput] = useState("");
     const [ displayUpdateInput, setDisplayUpdateInput] = useState(false);
+    const [ updatePostInput, setUpdatePostInput ] = useState("");
     const convertedTime = DateTime.fromISO(props.blog.timeStamp).toRelative();
 
     const submitComment = (e) => {
@@ -47,10 +48,12 @@ const BlogListEntry = (props) => {
           // displayUpdateInput becomes true
             // input tag disappears
           // post will display as "edited"
+        setDisplayUpdateInput(true);
     }
 
     const cancelUpdate = () => {
         console.log("Hello from cancelUpdate!");
+        setDisplayUpdateInput(false);
     }
 
     const deletePost = () => {
@@ -85,13 +88,27 @@ const BlogListEntry = (props) => {
             </div>
             {
                 props.username === props.blog.username ?
-                <div className="updateDeletePost">
-                    <div className="updatePost">
-                        <button onClick={updatePost}>Edit Post</button>
-                    </div>
-                    <div className="deletePost">
-                        <button onClick={deletePost}>Delete Post</button>
-                    </div>
+                <div>
+                    { !displayUpdateInput ?
+                        <div className="updateDeletePost">
+                            <div className="updatePost">
+                                <button onClick={updatePost}>Edit Post</button>
+                            </div>
+                            <div className="deletePost">
+                                <button onClick={deletePost}>Delete Post</button>
+                            </div>
+                        </div>
+                        : 
+                        <div className="updatePostInput">
+                            <input onChange={(e) => setUpdatePostInput(e.target.value)} value={updatePostInput}/>
+                            <div className="submitUpdate">
+                                <button onClick={updatePost}>Submit Update</button>
+                            </div>
+                            <div className="cancelUpdate">
+                                <button onClick={cancelUpdate}>Cancel</button>
+                            </div>
+                        </div>
+                    }
                 </div>
                 :
                 null
@@ -122,3 +139,19 @@ const BlogListEntry = (props) => {
 }
 
 export default BlogListEntry;
+
+
+
+// {
+//     props.username === props.blog.username ?
+//     <div className="updateDeletePost">
+//         <div className="updatePost">
+//             <button onClick={updatePost}>Edit Post</button>
+//         </div>
+//         <div className="deletePost">
+//             <button onClick={deletePost}>Delete Post</button>
+//         </div>
+//     </div>
+//     :
+//     null
+// }
