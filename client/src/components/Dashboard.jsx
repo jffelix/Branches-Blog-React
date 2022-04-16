@@ -36,13 +36,12 @@ const Dashboard = () => {
 
     const getUsername = async () => {
 
-        console.log("currentUser: ", currentUser);
         try {
             // every letter in params becomes lowercase
               // emails or usernams with uppercase letters will return undefined
             axios.get(`/signup/${currentUser.email}`)
             .then(response => {
-                console.log("response.data: ", response.data);
+                // console.log("response.data: ", response.data);
                 setUserId(response.data[0]._id);
                 setUsername(response.data[0].username);
             })
@@ -61,7 +60,6 @@ const Dashboard = () => {
             .then(response => {
                 setAllBlogs(response.data);
                 sortByMostRecent(response.data);
-                // console.log("response.data: ", response.data);
             })
             .catch(err => {
                 console.log("Error received during Axios GET request", err);

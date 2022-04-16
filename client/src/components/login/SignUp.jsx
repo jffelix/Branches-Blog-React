@@ -20,7 +20,6 @@ const SignUp = () => {
         e.preventDefault();
 
         if (passwordRef.current.value !== confirmPasswordRef.current.value) {
-            console.log("userName: ", userName);
             setError("Passwords do not match");
             return;
         }
@@ -36,8 +35,6 @@ const SignUp = () => {
                   // axios params are automatically lowercased
                 email: emailRef.current.value.toLowerCase()
             }
-
-            console.log("signUpObj: ", signUpObj);
 
             axios.post("/signup", signUpObj)
             .then(() => {
