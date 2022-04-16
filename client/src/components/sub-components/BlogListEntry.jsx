@@ -7,6 +7,7 @@ import "./BlogListEntry.css";
 const BlogListEntry = (props) => {
 
     const [ commentInput, setCommentInput] = useState("");
+    const [ displayUpdateInput, setDisplayUpdateInput] = useState(false);
     const convertedTime = DateTime.fromISO(props.blog.timeStamp).toRelative();
 
     const submitComment = (e) => {
@@ -32,7 +33,21 @@ const BlogListEntry = (props) => {
     }
 
     const updatePost = () => {
-        console.log("Hello from updatePost!");
+        // when "Edit Comment" is clicked
+          // blog post becomes an input
+          // "Edit Comment" becomes "Submit Update"
+          // "Delete Comment" becomes "Cancel"
+          // displayUpdateInput becomes true
+        // create state for the input
+        // create form for the input
+        // create object for the input
+        // when update is successfully submitted
+          // displayUpdateInput becomes true
+            // input tag disappears
+    }
+
+    const cancelUpdate = () => {
+        console.log("Hello from cancelUpdate!");
     }
 
     const deletePost = () => {
