@@ -34,11 +34,11 @@ const SignUp = () => {
             return;
         }
 
-        // tempory edge case for case sensitive usernames
-        if (doesContainUpperCase(userName)) {
-            alert("Username cannot contain an uppercase letter.");
-            return;
-        }
+        // // tempory edge case for case sensitive usernames
+        // if (doesContainUpperCase(userName)) {
+        //     alert("Username cannot contain an uppercase letter.");
+        //     return;
+        // }
 
         try {
             setError("");

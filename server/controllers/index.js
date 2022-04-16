@@ -25,6 +25,8 @@ const getUsername = async (req, res) => {
       email: req.params.id
     }
 
+    console.log("emailObj: ", emailObj);
+
     try {
         const user = await User.find({email: emailObj.email});
         
