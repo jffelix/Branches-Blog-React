@@ -16,12 +16,27 @@ const SignUp = () => {
     const [ loading, setLoading ] = useState(false);
     const navigate = useNavigate();
 
+    const doesContainUpperCase = (usernameInput) => {
+        for (var i = 0; i < usernameInput.length; i++) {
+            if (usernameInput[i] === usernameInput[i].toUpperCase()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (passwordRef.current.value !== confirmPasswordRef.current.value) {
             console.log("userName: ", userName);
             setError("Passwords do not match");
+            return;
+        }
+
+        // tempory edge case for case sensitive usernames
+        if (doesContainUpperCase(userName)) {
+            alert("Username cannot contain an uppercase letter.");
             return;
         }
 

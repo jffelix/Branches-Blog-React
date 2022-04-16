@@ -38,7 +38,7 @@ const Dashboard = () => {
         try {
             axios.get(`/signup/${currentUser.email}`)
             .then(response => {
-                // console.log("response.data: ", response.data);
+                console.log("response.data: ", response.data);
                 setUserId(response.data[0]._id);
                 setUsername(response.data[0].username);
             })
