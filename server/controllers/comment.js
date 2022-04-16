@@ -35,8 +35,15 @@ const deleteComment = async (req, res) => {
 
     try {
         // remember the comment is in a nested array
-        const post = await Post.find({
+          // with Post, it will only reveal the post, not the comment
+        const post = await Post.findOneAndUpdate({
             _id: postId
+        }, {
+            $pull: {
+                comments: {
+                    _id: commentId
+                }
+            }
         });
 
         console.log("post: ", post);
