@@ -33,7 +33,7 @@ const BlogListEntry = (props) => {
         })
     }
 
-    const updatePost = () => {
+    const selectEditComment = () => {
         // when "Edit Comment" is clicked
           // blog post becomes an input
           // "Edit Comment" becomes "Submit Update"
@@ -41,6 +41,10 @@ const BlogListEntry = (props) => {
           // displayUpdateInput becomes true
         // create state for the input
         // create form for the input
+        setDisplayUpdateInput(true);
+    }
+
+    const submitUpdate = () => {
         // create object for the input
           // include new blog
           // include new timestamp
@@ -48,11 +52,19 @@ const BlogListEntry = (props) => {
           // displayUpdateInput becomes true
             // input tag disappears
           // post will display as "edited"
-        setDisplayUpdateInput(true);
+        
+        const updateObj = {
+            blog: updatePostInput,
+            timeStamp: DateTime.now().toISO()
+        }
+
+        console.log("updateObj: ", updateObj);
+        
+        setUpdatePostInput("");
+        setDisplayUpdateInput(false);
     }
 
     const cancelUpdate = () => {
-        console.log("Hello from cancelUpdate!");
         setDisplayUpdateInput(false);
     }
 
@@ -92,7 +104,7 @@ const BlogListEntry = (props) => {
                     { !displayUpdateInput ?
                         <div className="updateDeletePost">
                             <div className="updatePost">
-                                <button onClick={updatePost}>Edit Post</button>
+                                <button onClick={selectEditComment}>Edit Post</button>
                             </div>
                             <div className="deletePost">
                                 <button onClick={deletePost}>Delete Post</button>
@@ -105,7 +117,7 @@ const BlogListEntry = (props) => {
                             </div>
                             <div className="updatePostInput">
                                 <div className="submitUpdate">
-                                    <button onClick={updatePost}>Submit Update</button>
+                                    <button onClick={submitUpdate}>Submit Update</button>
                                 </div>
                                 <div className="cancelUpdate">
                                     <button onClick={cancelUpdate}>Cancel</button>
