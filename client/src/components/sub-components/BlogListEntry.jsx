@@ -99,13 +99,17 @@ const BlogListEntry = (props) => {
                             </div>
                         </div>
                         : 
-                        <div className="updatePostInput">
-                            <input onChange={(e) => setUpdatePostInput(e.target.value)} value={updatePostInput}/>
-                            <div className="submitUpdate">
-                                <button onClick={updatePost}>Submit Update</button>
+                        <div>
+                            <div className="updatePostForm">
+                                <input onChange={(e) => setUpdatePostInput(e.target.value)} value={updatePostInput}/>
                             </div>
-                            <div className="cancelUpdate">
-                                <button onClick={cancelUpdate}>Cancel</button>
+                            <div className="updatePostInput">
+                                <div className="submitUpdate">
+                                    <button onClick={updatePost}>Submit Update</button>
+                                </div>
+                                <div className="cancelUpdate">
+                                    <button onClick={cancelUpdate}>Cancel</button>
+                                </div>
                             </div>
                         </div>
                     }
