@@ -26,6 +26,42 @@ const addComment = async (req, res) => {
     }
 }
 
+const updateComment = async (req, res) => {
+    const commentId = req.params.id;
+    const postId = req.body.postId;
+    console.log("req.body: ", req.body);
+    // console.log("commentId: ", commentId);
+    // console.log("postId: ", postId);
+
+    try {
+        // const post = await Post.find({_id: postId});
+        const post = await Post.find({ _id: postId });
+
+        if (post.length === 1) {
+            const updatePost = await Post.findOneAndUpdate({
+                _id: postId,
+                comments: {
+                    $elemMatch: {
+                        _id: commentId
+                    }
+                }
+            }, {
+                $set: {
+                    "comments.$.username": req.body.username,
+                    "comments.$.comment": req.body.comment,
+                    "comments.$.timeStamp": req.body.timeStamp,
+                    "comments.$.likes": req.body.likes
+                }
+            });
+            return res.status(200).send("Post updated!");
+        }
+        return res.status(400).send("Error while updating post.");
+
+    } catch {
+        return res.status(400).send("Error while updating post.");
+    }
+}
+
 
 const deleteComment = async (req, res) => {
     const commentId = req.params.id;
@@ -58,5 +94,29 @@ const deleteComment = async (req, res) => {
 
 module.exports = {
     addComment,
+    updateComment,
     deleteComment
 }
+
+
+
+// $set: {
+//     username: req.body.username,
+//     comment: req.body.comment,
+//     timeStamp: req.body.timeStamp,
+//     likes: req.body.likes
+// }
+
+// $set: {
+//     "comments.$.username": req.body.username,
+//     "comments.$.comment": req.body.comment,
+//     "comments.$.timeStamp": req.body.timeStamp,
+//     "comments.$.likes": req.body.likes
+// }
+
+// $set: {
+//     "comments.0.username": req.body.username,
+//     "comments.0.comment": req.body.comment,
+//     "comments.0.timeStamp": req.body.timeStamp,
+//     "comments.0.likes": req.body.likes
+// }

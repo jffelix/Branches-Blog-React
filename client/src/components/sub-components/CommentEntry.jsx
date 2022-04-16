@@ -15,11 +15,22 @@ const CommentEntry = (props) => {
 
     const submitUpdateComment = () => {
         const updateObj = {
+            username: props.username,
             postId: props.postId,
             comment: updateCommentInput,
-            timeStamp: DateTime.now().toISO()
+            timeStamp: DateTime.now().toISO(),
+            likes: 0
         }
-        console.log("updateObj: ", updateObj);
+
+        
+        axios.patch(`/updateComment/${props.comment._id}`, updateObj)
+        .then(response => {
+            console.log("Successfully connected with Axios PATCH request!");
+            props.getAllBlogs();
+        })
+        .catch(err => {
+            console.log("Error received during Axios PATCH request.", err);
+        })
 
         setUpdateCommentInput("");
         setDisplayUpdateField(false);
