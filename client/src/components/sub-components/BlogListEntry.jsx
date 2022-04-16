@@ -18,7 +18,6 @@ const BlogListEntry = (props) => {
             alert("Input field cannot be empty.");
             return;
         }
-
         let commentObj = {
             username: props.username,
             comment: commentInput,
@@ -38,14 +37,7 @@ const BlogListEntry = (props) => {
         })
     }
 
-    const selectEditComment = () => {
-        // when "Edit Comment" is clicked
-          // blog post becomes an input
-          // "Edit Comment" becomes "Submit Update"
-          // "Delete Comment" becomes "Cancel"
-          // displayUpdateInput becomes true
-        // create state for the input
-        // create form for the input
+    const selectEditPost = () => {
         setDisplayUpdateInput(true);
     }
 
@@ -64,7 +56,7 @@ const BlogListEntry = (props) => {
             timeStamp: DateTime.now().toISO()
         }
         // console.log("updateObj: ", updateObj);
-        
+
         axios.patch(`/updatePost/${props.blog._id}`, updateObj)
         .then(response => {
             console.log("Successfully connected with Axios PATCH request!");
@@ -118,7 +110,7 @@ const BlogListEntry = (props) => {
                     { !displayUpdateInput ?
                         <div className="updateDeletePost">
                             <div className="updatePost">
-                                <button onClick={selectEditComment}>Edit Post</button>
+                                <button onClick={selectEditPost}>Edit Post</button>
                             </div>
                             <div className="deletePost">
                                 <button onClick={deletePost}>Delete Post</button>
@@ -169,19 +161,3 @@ const BlogListEntry = (props) => {
 }
 
 export default BlogListEntry;
-
-
-
-// {
-//     props.username === props.blog.username ?
-//     <div className="updateDeletePost">
-//         <div className="updatePost">
-//             <button onClick={updatePost}>Edit Post</button>
-//         </div>
-//         <div className="deletePost">
-//             <button onClick={deletePost}>Delete Post</button>
-//         </div>
-//     </div>
-//     :
-//     null
-// }
