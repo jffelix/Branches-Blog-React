@@ -16,15 +16,6 @@ const SignUp = () => {
     const [ loading, setLoading ] = useState(false);
     const navigate = useNavigate();
 
-    const doesContainUpperCase = (usernameInput) => {
-        for (var i = 0; i < usernameInput.length; i++) {
-            if (usernameInput[i] === usernameInput[i].toUpperCase()) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -34,12 +25,6 @@ const SignUp = () => {
             return;
         }
 
-        // // tempory edge case for case sensitive usernames
-        // if (doesContainUpperCase(userName)) {
-        //     alert("Username cannot contain an uppercase letter.");
-        //     return;
-        // }
-
         try {
             setError("");
             setLoading(true);
@@ -47,8 +32,12 @@ const SignUp = () => {
 
             let signUpObj = {
                 username: userName,
-                email: emailRef.current.value
+                // important to lowercase email
+                  // axios params are automatically lowercased
+                email: emailRef.current.value.toLowerCase()
             }
+
+            console.log("signUpObj: ", signUpObj);
 
             axios.post("/signup", signUpObj)
             .then(() => {

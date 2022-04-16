@@ -35,6 +35,8 @@ const Dashboard = () => {
     }
 
     const getUsername = async () => {
+
+        console.log("currentUser: ", currentUser);
         try {
             // every letter in params becomes lowercase
               // emails or usernams with uppercase letters will return undefined
