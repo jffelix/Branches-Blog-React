@@ -5,11 +5,11 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 ## Notable Features
 - Email and password authentication via Firebase
 - User information and posts stored via MongoDB
+- Full CRUD operations for posts and comments
 - Login will recognize username from email credentials
 - Post blogs
 - Posts include a timestamp
 - Blogs sorted by Most Recent at default
-- Adding comments to blog posts
 - Comments are sorted by oldest post
 
 ## Features In Progress
