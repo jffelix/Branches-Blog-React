@@ -14,6 +14,11 @@ const BlogListEntry = (props) => {
     const submitComment = (e) => {
         e.preventDefault();
 
+        if (commentInput.length === 0) {
+            alert("Input field cannot be empty.");
+            return;
+        }
+
         let commentObj = {
             username: props.username,
             comment: commentInput,
