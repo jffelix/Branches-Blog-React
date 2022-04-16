@@ -53,3 +53,33 @@
     margin: 4px 10px;
 }
 
+.updateCommentInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.updateCommentForm input {
+    border-style: solid;
+    padding: 10px;
+    width: 50%;
+    margin: 10px;
+}
+
+.submitUpdate button {
+    border-style: solid;
+    color: white;
+    color: rgb(145, 140, 140);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 4px;
+    margin: 4px 10px;
+}
+
+.cancelUpdate button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(241, 156, 134);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 4px;
+    margin: 4px 10px;
+}
