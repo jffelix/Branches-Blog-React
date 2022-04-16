@@ -21,11 +21,31 @@ const createNewPost = async (req, res) => {
     }
 }
 
-const updatePost = async = (req, res) => {
+const updatePost = async (req, res) => {
     const postId = req.params.id;
     const updateObj = req.body;
     console.log("postId: ", postId);
     console.log("updateObj: ", updateObj);
+
+    try {
+        const post = await Post.find({_id: postId});
+
+        if (post.length === 1) {
+            const updatePost = await Post.findOneAndUpdate({
+                _id: postId
+            }, {
+                $set: {
+                    blog: updateObj.blog,
+                    timeStamp: updateObj.timeStamp
+                }
+            });
+            return res.status(200).send("Post updated!");
+        }
+        return res.status(400).send("Error while updating post.");
+
+    } catch {
+        return res.status(400).send("Error while updating post.");
+    }
 }
 
 const deletePost = async (req, res) => {

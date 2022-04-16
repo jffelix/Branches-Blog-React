@@ -59,11 +59,20 @@ const BlogListEntry = (props) => {
           // post will display as "edited"
         
         const updateObj = {
+            postId: props.blog._id,
             blog: updatePostInput,
             timeStamp: DateTime.now().toISO()
         }
-
-        console.log("updateObj: ", updateObj);
+        // console.log("updateObj: ", updateObj);
+        
+        axios.patch(`/updatePost/${props.blog._id}`, updateObj)
+        .then(response => {
+            console.log("Successfully connected with Axios PATCH request!");
+            props.getAllBlogs();
+        })
+        .catch(err => {
+            console.log("Error received during Axios PATCH request.", err);
+        })
         
         setUpdatePostInput("");
         setDisplayUpdateInput(false);
