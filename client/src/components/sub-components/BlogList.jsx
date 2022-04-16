@@ -28,6 +28,7 @@ const BlogList = (props) => {
                         key={index}
                         username={props.username}
                         postId={props.postId}
+                        getAllBlogs={props.getAllBlogs}
                     />
                 )}
             </div>

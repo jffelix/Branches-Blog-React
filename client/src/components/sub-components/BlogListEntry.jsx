@@ -82,6 +82,7 @@ const BlogListEntry = (props) => {
                     comments={props.blog.comments}
                     username={props.username}
                     postId={props.blog._id}
+                    getAllBlogs={props.getAllBlogs}
                 />
             </div>
             <div className="addComment">

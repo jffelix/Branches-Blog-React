@@ -17,7 +17,8 @@ const CommentEntry = (props) => {
             data: deleteObj
         })
         .then(response => {
-            console.log("Successfully connected with Axios DELETE request!");
+            console.log(response.data);
+            props.getAllBlogs();
         })
         .catch(err => {
             console.log("Error received during Axios DELETE request.", err);
