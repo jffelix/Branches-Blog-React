@@ -36,7 +36,6 @@ const deletePost = async (req, res) => {
     } catch {
         return res.status(400).send("Error while deleting post.");
     }
-
 }
 
 module.exports = {

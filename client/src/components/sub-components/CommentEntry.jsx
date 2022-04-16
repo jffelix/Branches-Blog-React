@@ -1,5 +1,6 @@
 import React from "react";
 import { DateTime } from "luxon";
+import axios from "axios";
 import "./CommentEntry.css";
 
 const CommentEntry = (props) => {
@@ -7,7 +8,19 @@ const CommentEntry = (props) => {
     const convertedTime = DateTime.fromISO(props.comment.timeStamp).toRelative();
 
     const deleteComment = () => {
-        console.log("Hello from deleteComment!");
+        const selectedId = props.comment._id;
+        const deleteObj = {
+            postId: props.postId
+        }
+        console.log("deleteObj: ", deleteObj);
+        
+        axios.delete(`/deleteComment/${selectedId}`)
+        .then(response => {
+            console.log("Successfully connected with Axios DELETE request!");
+        })
+        .catch(err => {
+            console.log("Error received during Axios DELETE request.", err);
+        })
     }
 
     return (

@@ -27,6 +27,7 @@ const BlogList = (props) => {
                         comment={comment} 
                         key={index}
                         username={props.username}
+                        postId={props.postId}
                     />
                 )}
             </div>
