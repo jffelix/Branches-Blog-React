@@ -12,9 +12,10 @@ const CommentEntry = (props) => {
         const deleteObj = {
             postId: props.postId
         }
-        console.log("deleteObj: ", deleteObj);
         
-        axios.delete(`/deleteComment/${selectedId}`)
+        axios.delete(`/deleteComment/${selectedId}`, {
+            data: deleteObj
+        })
         .then(response => {
             console.log("Successfully connected with Axios DELETE request!");
         })

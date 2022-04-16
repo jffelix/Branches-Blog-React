@@ -29,16 +29,14 @@ const addComment = async (req, res) => {
 
 const deleteComment = async (req, res) => {
     const commentId = req.params.id;
-    // console.log("commentId: ", commentId);
+    const postId = req.body.postId;
+    console.log("commentId: ", commentId);
+    console.log("postId: ", postId);
+
     try {
         // remember the comment is in a nested array
         const post = await Post.find({
-            _id: commentId, 
-            comments: [
-                {
-                    _id: commentId
-                }
-            ]
+            _id: postId
         });
 
         console.log("post: ", post);
