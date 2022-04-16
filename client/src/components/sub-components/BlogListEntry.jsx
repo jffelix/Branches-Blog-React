@@ -41,9 +41,12 @@ const BlogListEntry = (props) => {
         // create state for the input
         // create form for the input
         // create object for the input
+          // include new blog
+          // include new timestamp
         // when update is successfully submitted
           // displayUpdateInput becomes true
             // input tag disappears
+          // post will display as "edited"
     }
 
     const cancelUpdate = () => {
