@@ -13,7 +13,6 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - Comments are sorted by oldest post
 
 ## Features In Progress
-- Edit posts/comments
 - My Profile page
 - "Like" system
 - Sort blogs by Most Likes
