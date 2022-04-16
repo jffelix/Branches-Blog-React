@@ -31,6 +31,10 @@ const BlogListEntry = (props) => {
         })
     }
 
+    const updatePost = () => {
+        console.log("Hello from updatePost!");
+    }
+
     const deletePost = () => {
 
         const selectedPostId = props.blog._id;
@@ -65,7 +69,7 @@ const BlogListEntry = (props) => {
                 props.username === props.blog.username ?
                 <div className="updateDeletePost">
                     <div className="updatePost">
-                        <button>Edit Post</button>
+                        <button onClick={updatePost}>Edit Post</button>
                     </div>
                     <div className="deletePost">
                         <button onClick={deletePost}>Delete Post</button>

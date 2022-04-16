@@ -14,7 +14,6 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 
 ## Features In Progress
 - Edit posts/comments
-- Delete posts/comments
 - My Profile page
 - "Like" system
 - Sort blogs by Most Likes
