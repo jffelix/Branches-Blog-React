@@ -28,7 +28,7 @@ const MyProfile = () => {
             .then(response => {
                 setUserId(response.data[0]._id);
                 setUsername(response.data[0].username);
-                getUserBlogs(response.data[0]._id)
+                getUserBlogs(response.data[0]._id);
                 // console.log("response.data: ", response.data);
             })
             .catch(err => {
@@ -56,6 +56,22 @@ const MyProfile = () => {
         }
     }
 
+    const getUserBlogsRefresh = async () => {
+        try {
+            axios.get(`/userPosts/${userId}`)
+            .then(response => {
+                setUserBlogs(response.data);
+                // sortByMostRecent(response.data);
+                // console.log("response.data: ", response.data);
+            })
+            .catch(err => {
+                console.log("Error received during Axios GET request", err);
+            })
+        } catch {
+            console.log("Failed to retrieve posts.");
+        }
+    }
+
     return (
         <div>
             <div className="userHeader">
@@ -69,7 +85,7 @@ const MyProfile = () => {
                 <BlogList
                     userBlogs={userBlogs}
                     username={username}
-                    getUserBlogs={getUserBlogs}
+                    getUserBlogs={getUserBlogsRefresh}
                 />
             </div>
         </div>
