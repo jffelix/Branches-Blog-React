@@ -141,33 +141,37 @@ const Dashboard = () => {
     }
 
     return (
-        <div className="dashboard">
-            <div className="profileLink">
-                <h3>Welcome, {username}</h3>
+        <div>
+            <div className="navBar">
+                <div className="profileLink">
+                    <h3>Welcome, {username}</h3>
+                </div>
+                <div className="myProfileButton">
+                    <button onClick={handleMyProfile}>My Profile</button>
+                </div>
+                <div className="logOut">
+                    <button variant="link" onClick={handleLogOut}>Log Out</button>
+                </div>
             </div>
-            <div className="myProfile">
-                <button onClick={handleMyProfile}>My Profile</button>
-            </div>
-            <div className="logOut">
-                <button variant="link" onClick={handleLogOut}>Log Out</button>
-            </div>
-            <div className="createPost">
-                <h2>Create New Post</h2>
-                <p>Type what you're thinking . . .</p>
-                <form onSubmit={(e) => submitNewPost(e)}>
-                    <input type="blog" onChange={(e) => setBlogInput(e.target.value)} value={blogInput} />
-                    <p></p>
-                    <button>Post</button>
-                </form>
-            </div>
-            <div className="mainFeed">  
-                <h2>Main Feed</h2>
-                <BlogList 
-                    username={username} 
-                    blogs={sortedBlogs}
-                    getAllBlogs={getAllBlogs}
-                />
-                {error && <Alert variant="danger">{error}</Alert>}
+            <div className="dashboard">
+                <div className="createPost">
+                    <h2>Create New Post</h2>
+                    <p>Type what you're thinking . . .</p>
+                    <form onSubmit={(e) => submitNewPost(e)}>
+                        <input type="blog" onChange={(e) => setBlogInput(e.target.value)} value={blogInput} />
+                        <p></p>
+                        <button>Post</button>
+                    </form>
+                </div>
+                <div className="mainFeed">  
+                    <h2>Main Feed</h2>
+                    <BlogList 
+                        username={username} 
+                        blogs={sortedBlogs}
+                        getAllBlogs={getAllBlogs}
+                    />
+                    {error && <Alert variant="danger">{error}</Alert>}
+                </div>
             </div>
         </div>
     )
