@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import BlogList from "../sub-components/BlogList.jsx";
 import { useAuth } from "../../context/authContext.js";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -8,7 +9,7 @@ const MyProfile = () => {
     useEffect(() => {
         getUsername();
         // getUserBlogs();
-    }, [])
+    },[])
 
     const navigate = useNavigate();
     const { currentUser } = useAuth();
@@ -44,7 +45,7 @@ const MyProfile = () => {
             axios.get(`/userPosts/${id}`)
             .then(response => {
                 console.log("response.data: ", response.data);
-                // setUserBlogs(response.data);
+                setUserBlogs(response.data);
                 // sortByMostRecent(response.data);
             })
             .catch(err => {
@@ -65,6 +66,11 @@ const MyProfile = () => {
             </div>
             <div className="userBlogs">
                 <h2>Your Blogs</h2>
+                <BlogList
+                    userBlogs={userBlogs}
+                    username={username}
+                    getUserBlogs={getUserBlogs}
+                />
             </div>
         </div>
     )

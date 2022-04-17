@@ -11,18 +11,12 @@ const getAllPosts = async (req, res) => {
 }
 
 const getUserBlogs = async (req, res) => {
-
     const userId = req.params.id;
-    console.log("req.params: ", req.params);
-    console.log("userId: ", userId);
-
+    // console.log("req.params: ", req.params);
+    // console.log("userId: ", userId);
     try {
         const posts = await Post.find({userId: userId});
-        console.log('posts: ', posts);
-        if (posts.length === 1) {
-            return res.status(200).send(posts);
-        }
-        return res.status(400).send("Error while fetching posts");
+        return res.status(200).send(posts);
     } catch {
         return res.status(400).send("Error while fetching posts");
     }
