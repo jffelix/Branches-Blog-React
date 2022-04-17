@@ -7,8 +7,8 @@ const MyProfile = () => {
 
     useEffect(() => {
         getUsername();
-        getUserBlogs();
-    })
+        // getUserBlogs();
+    }, [])
 
     const navigate = useNavigate();
     const { currentUser } = useAuth();
@@ -27,6 +27,7 @@ const MyProfile = () => {
             .then(response => {
                 setUserId(response.data[0]._id);
                 setUsername(response.data[0].username);
+                getUserBlogs(response.data[0]._id)
                 // console.log("response.data: ", response.data);
             })
             .catch(err => {
@@ -38,9 +39,9 @@ const MyProfile = () => {
         }
     }
 
-    const getUserBlogs = async () => {
+    const getUserBlogs = async (id) => {
         try {
-            axios.get("/userPosts")
+            axios.get(`/userPosts/${id}`)
             .then(response => {
                 console.log("response.data: ", response.data);
                 // setUserBlogs(response.data);

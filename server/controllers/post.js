@@ -1,9 +1,28 @@
 const Post = require("../database/post.js");
+const { post } = require("../routers/index.js");
 
 const getAllPosts = async (req, res) => {
     try {
         const posts = await Post.find();
         return res.status(200).send(posts);
+    } catch {
+        return res.status(400).send("Error while fetching posts");
+    }
+}
+
+const getUserBlogs = async (req, res) => {
+
+    const userId = req.params.id;
+    console.log("req.params: ", req.params);
+    console.log("userId: ", userId);
+
+    try {
+        const posts = await Post.find({userId: userId});
+        console.log('posts: ', posts);
+        if (posts.length === 1) {
+            return res.status(200).send(posts);
+        }
+        return res.status(400).send("Error while fetching posts");
     } catch {
         return res.status(400).send("Error while fetching posts");
     }
@@ -63,8 +82,9 @@ const deletePost = async (req, res) => {
 }
 
 module.exports = {
-    createNewPost,
     getAllPosts,
+    getUserBlogs,
+    createNewPost,
     updatePost,
     deletePost
 }

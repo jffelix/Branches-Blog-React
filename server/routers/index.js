@@ -5,6 +5,7 @@ const router = require("express").Router();
 
 router.get("/signup/:id", controllers.getUsername);
 router.get("/getPosts", postControllers.getAllPosts);
+router.get("/userPosts/:id", postControllers.getUserBlogs);
 router.post("/signup", controllers.signUp);
 router.post("/createPost", postControllers.createNewPost);
 router.post("/createComment", commentControllers.addComment);
