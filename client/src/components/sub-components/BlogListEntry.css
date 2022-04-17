@@ -24,6 +24,25 @@
     justify-content: center;
 }
 
+.blogLikes {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.likePost {
+    text-align: center;
+    margin: 10px;
+}
+
+.likePost button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(93, 143, 219);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 6px;
+    margin: 0 10px;
+}
+
 .updatePost button {
     border-style: solid;
     color: rgb(145, 140, 140);

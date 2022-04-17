@@ -74,8 +74,11 @@ const BlogListEntry = (props) => {
         setDisplayUpdateInput(false);
     }
 
-    const deletePost = () => {
+    const likePost = () => {
+        console.log("Hello from likePost!");
+    }
 
+    const deletePost = () => {
         const selectedPostId = props.blog._id;
         
         axios.delete(`/deletePost/${selectedPostId}`)
@@ -104,6 +107,9 @@ const BlogListEntry = (props) => {
             <div className="blogLikes">
                 <p>Likes: {props.blog.likes}</p>
             </div>
+                <div className="likePost">
+                    <button onClick={likePost}>Like</button>
+                </div>
             {
                 props.username === props.blog.username ?
                 <div>
