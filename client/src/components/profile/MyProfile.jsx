@@ -78,6 +78,9 @@ const MyProfile = () => {
             <div className="backToDashboard">
                 <button onClick={backToDashboard}>Back to Dashboard</button>
             </div>
+            <div className="myProfilePicture">
+                <div className="pictureCircle"></div>
+            </div>
             <div className="myProfile">
                 <div className="userHeader">
                     <h3>{username} Profile</h3>

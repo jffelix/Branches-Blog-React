@@ -1,3 +1,17 @@
+.myProfilePicture {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pictureCircle {
+    text-align: center;
+    border-style: solid;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
 .myProfile {
     text-align: center;
     font-family: 'Fira Sans', sans-serif;
