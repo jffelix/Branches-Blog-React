@@ -7,13 +7,12 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - User information and posts stored via MongoDB
 - Full CRUD operations for posts and comments
 - Login will recognize username from email credentials
-- Post blogs
 - Posts include a timestamp
 - Blogs sorted by Most Recent at default
 - Comments are sorted by oldest post
+- My Profile page
 
 ## Features In Progress
-- My Profile page
 - "Like" system
 - Sort blogs by Most Likes
 - Forgot Password feature
