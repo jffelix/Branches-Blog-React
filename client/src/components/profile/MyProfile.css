@@ -4,6 +4,10 @@
     margin: 50px 100px;
 }
 
+.userHeader h3 {
+    font-size: 30px;
+}
+
 .userBlogs h2 {
     text-align: left;
     color: white;
@@ -11,4 +15,14 @@
     border-bottom: solid;
     margin-left: 30px;
     padding: 10px;
+}
+
+.backToDashboard button {
+    text-align: left;
+    border-style: solid;
+    color: rgb(116, 113, 113);
+    background-color: rgb(237, 245, 164);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 6px;
+    margin: 10px 10px;
 }

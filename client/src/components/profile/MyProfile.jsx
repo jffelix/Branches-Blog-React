@@ -74,20 +74,22 @@ const MyProfile = () => {
     }
 
     return (
-        <div className="myProfile">
-            <div className="userHeader">
-                <h3>{username} Profile</h3>
-            </div>
+        <div>
             <div className="backToDashboard">
                 <button onClick={backToDashboard}>Back to Dashboard</button>
             </div>
-            <div className="userBlogs">
-                <h2>Your Blogs</h2>
-                <BlogList
-                    userBlogs={userBlogs}
-                    username={username}
-                    getUserBlogs={getUserBlogsRefresh}
-                />
+            <div className="myProfile">
+                <div className="userHeader">
+                    <h3>{username} Profile</h3>
+                </div>
+                <div className="userBlogs">
+                    <h2>Your Blogs</h2>
+                    <BlogList
+                        userBlogs={userBlogs}
+                        username={username}
+                        getUserBlogs={getUserBlogsRefresh}
+                    />
+                </div>
             </div>
         </div>
     )
