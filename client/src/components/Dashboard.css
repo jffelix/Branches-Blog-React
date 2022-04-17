@@ -11,7 +11,7 @@
 
 .createPost h2 {
     text-align: left;
-    background-color: rgb(37, 122, 42);
+    background-color: rgb(46, 151, 53);
     color: white;
     font-size: 26px;
     padding-left: 40px;
@@ -40,7 +40,7 @@
 .mainFeed h2 {
     text-align: left;
     font-size: 30px;
-    background-color: rgb(165, 101, 42);
+    background-color: rgb(190, 119, 53);
     color: white;
     padding-left: 40px;
 }
