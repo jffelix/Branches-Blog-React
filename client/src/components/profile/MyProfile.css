@@ -1,0 +1,14 @@
+.myProfile {
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 50px 100px;
+}
+
+.userBlogs h2 {
+    text-align: left;
+    color: white;
+    background-color: rgb(165, 101, 42);
+    border-bottom: solid;
+    margin-left: 30px;
+    padding: 10px;
+}

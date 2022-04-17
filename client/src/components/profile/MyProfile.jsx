@@ -3,6 +3,7 @@ import BlogList from "../sub-components/BlogList.jsx";
 import { useAuth } from "../../context/authContext.js";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./MyProfile.css";
 
 const MyProfile = () => {
 
@@ -73,7 +74,7 @@ const MyProfile = () => {
     }
 
     return (
-        <div>
+        <div className="myProfile">
             <div className="userHeader">
                 <h3>{username} Profile</h3>
             </div>
