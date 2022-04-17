@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 const MyProfile = () => {
 
+    const navigate = useNavigate();
+
     const backToDashboard = () => {
         navigate("/dashboard", { replace: true });
     }

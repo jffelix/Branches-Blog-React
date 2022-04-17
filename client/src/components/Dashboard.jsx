@@ -34,6 +34,10 @@ const Dashboard = () => {
         }
     }
 
+    const handleMyProfile = () => {
+        navigate("/myprofile", {replace: true});
+    }
+
     const getUsername = async () => {
 
         try {
@@ -140,6 +144,9 @@ const Dashboard = () => {
         <div className="dashboard">
             <div className="profileLink">
                 <h3>Welcome, {username}</h3>
+            </div>
+            <div className="myProfile">
+                <button onClick={handleMyProfile}>My Profile</button>
             </div>
             <div className="logOut">
                 <button variant="link" onClick={handleLogOut}>Log Out</button>
