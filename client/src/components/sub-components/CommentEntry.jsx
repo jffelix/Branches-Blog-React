@@ -61,7 +61,7 @@ const CommentEntry = (props) => {
 
     const likeComment = () => {
         // console.log("props.comment._id: ", props.comment._id);
-        axios.patch(`/likeComment/${props.comment._id}`)
+        axios.patch(`/likeComment/${props.postId}`)
         .then(response => {
             console.log("Successfully connected with Axios PATCH request!")
             props.getAllBlogs();
