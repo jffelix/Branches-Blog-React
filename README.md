@@ -11,9 +11,11 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - Blogs sorted by Most Recent at default
 - Comments are sorted by oldest post
 - My Profile page
+- "Like" and "Unlike" system
 
 ## Features In Progress
 - Forgot Password feature
 - Sort blogs by Most Likes
 - One "Like" per post/comment for user
+- See who liked your posts/comments
 - Private messenger between users
