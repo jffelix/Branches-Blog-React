@@ -46,6 +46,7 @@ const updatePost = async (req, res) => {
             const updatePost = await Post.findOneAndUpdate({
                 _id: postId
             }, {
+                // updates specified post
                 $set: {
                     blog: updateObj.blog,
                     timeStamp: updateObj.timeStamp
@@ -75,10 +76,36 @@ const deletePost = async (req, res) => {
     }
 }
 
+const likePost = async (req, res) => {
+    const postId = req.params.id;
+
+    try {
+        const post = await Post.find({_id: postId});
+        console.log("post: ", post);
+
+        if (post.length === 1) {
+            const updatePost = await Post.findOneAndUpdate({
+                _id: postId
+            }, {
+                // increments selected property
+                $inc: {
+                    likes: 1
+                }
+            });
+            return res.status(200).send("Post updated!");
+        }
+        return res.status(400).send("Error while updating post.");
+
+    } catch {
+        return res.status(400).send("Error while updating post.");
+    }
+}
+
 module.exports = {
     getAllPosts,
     getUserBlogs,
     createNewPost,
     updatePost,
-    deletePost
+    deletePost,
+    likePost
 }

@@ -11,6 +11,7 @@ router.post("/createPost", postControllers.createNewPost);
 router.post("/createComment", commentControllers.addComment);
 router.patch("/updatePost/:id", postControllers.updatePost);
 router.patch("/updateComment/:id", commentControllers.updateComment);
+router.patch("/like/:id", postControllers.likePost);
 router.delete("/deletePost/:id", postControllers.deletePost);
 router.delete("/deleteComment/:id", commentControllers.deleteComment);
 

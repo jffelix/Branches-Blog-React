@@ -68,7 +68,14 @@ const BlogListEntry = (props) => {
     }
 
     const likePost = () => {
-        console.log("Hello from likePost!");
+        axios.patch(`/like/${props.blog._id}`)
+        .then(response => {
+            console.log("Successfully connected with Axios PATCH request!")
+            props.getAllBlogs();
+        })
+        .catch(err => {
+            console.log("Error received during Axios PATCH request.");
+        })
         setWasPostLiked(true);
     }
 
