@@ -71,7 +71,6 @@ const CommentEntry = (props) => {
             updateObj.likes--;
         }
 
-        // console.log("props.comment._id: ", props.comment._id);
         axios.patch(`/likeComment/${props.postId}`, updateObj)
         .then(response => {
             console.log("Successfully connected with Axios PATCH request!")

@@ -13,6 +13,5 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - My Profile page
 
 ## Features In Progress
-- "Like" system
 - Sort blogs by Most Likes
 - Forgot Password feature

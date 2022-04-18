@@ -91,10 +91,6 @@ const deleteComment = async (req, res) => {
 
 const likeComment = async (req, res) => {
     const postId = req.params.id;
-    console.log("postId: ", postId);
-
-    console.log("req.body: ", req.body);
-
     try {
         const post = await Post.find({ _id: postId });
 

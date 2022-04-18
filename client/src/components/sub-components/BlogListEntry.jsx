@@ -68,19 +68,18 @@ const BlogListEntry = (props) => {
     }
 
     const likePost = () => {
-        axios.patch(`/like/${props.blog._id}`)
-        .then(response => {
-            console.log("Successfully connected with Axios PATCH request!")
-            props.getAllBlogs();
-        })
-        .catch(err => {
-            console.log("Error received during Axios PATCH request.");
-        })
-        setWasPostLiked(true);
-    }
+        const updateObj = {
+            _id: props.blog._id,
+            likes: props.blog.likes
+        }
 
-    const unlikePost = () => {
-        axios.patch(`/unlike/${props.blog._id}`)
+        if (!wasPostLiked) {
+            updateObj.likes++;
+        } else {
+            updateObj.likes--;
+        }
+
+        axios.patch(`/like/${props.blog._id}`, updateObj)
         .then(response => {
             console.log("Successfully connected with Axios PATCH request!")
             props.getAllBlogs();
@@ -88,7 +87,13 @@ const BlogListEntry = (props) => {
         .catch(err => {
             console.log("Error received during Axios PATCH request.");
         })
-        setWasPostLiked(false);
+
+        if (!wasPostLiked) {
+            setWasPostLiked(true);
+        } else {
+            setWasPostLiked(false);
+        }
+
     }
 
     const deletePost = () => {
@@ -126,7 +131,7 @@ const BlogListEntry = (props) => {
                 </div>
                 :
                 <div className="unlikePost">
-                    <button onClick={unlikePost}>Unlike</button>
+                    <button onClick={likePost}>Unlike</button>
                 </div> 
             }
             {

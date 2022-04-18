@@ -82,31 +82,8 @@ const likePost = async (req, res) => {
                 _id: postId
             }, {
                 // increments selected property
-                $inc: {
-                    likes: 1
-                }
-            });
-            return res.status(200).send("Post updated!");
-        }
-        return res.status(400).send("Error while updating post.");
-
-    } catch {
-        return res.status(400).send("Error while updating post.");
-    }
-}
-
-const unlikePost = async (req, res) => {
-    const postId = req.params.id;
-
-    try {
-        const post = await Post.find({_id: postId});
-        // console.log("post: ", post);
-        if (post.length === 1) {
-            const updatePost = await Post.findOneAndUpdate({
-                _id: postId
-            }, {
-                $inc: {
-                    likes: -1
+                $set: {
+                    likes: req.body.likes
                 }
             });
             return res.status(200).send("Post updated!");
@@ -124,6 +101,5 @@ module.exports = {
     createNewPost,
     updatePost,
     deletePost,
-    likePost,
-    unlikePost
+    likePost
 }

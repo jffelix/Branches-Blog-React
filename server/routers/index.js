@@ -13,7 +13,6 @@ router.patch("/updatePost/:id", postControllers.updatePost);
 router.patch("/updateComment/:id", commentControllers.updateComment);
 router.patch("/like/:id", postControllers.likePost);
 router.patch("/likeComment/:id", commentControllers.likeComment);
-router.patch("/unlike/:id", postControllers.unlikePost);
 router.delete("/deletePost/:id", postControllers.deletePost);
 router.delete("/deleteComment/:id", commentControllers.deleteComment);
 
