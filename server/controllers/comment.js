@@ -14,6 +14,7 @@ const addComment = async (req, res) => {
                 _id: postObj.postId
             },
             {
+                // adds to specified property
                 "$push": {
                     comments: postObj
                 }
@@ -42,6 +43,7 @@ const updateComment = async (req, res) => {
                     }
                 }
             }, {
+                // updates selected properties
                 $set: {
                     "comments.$.username": req.body.username,
                     "comments.$.comment": req.body.comment,
@@ -87,8 +89,34 @@ const deleteComment = async (req, res) => {
     }
 }
 
+const likeComment = async (req, res) => {
+    const postId = req.params.id;
+    console.log("postId: ", postId);
+
+    // try {
+    //     const post = await Post.find({_id: postId});
+    //     // console.log("post: ", post);
+    //     if (post.length === 1) {
+    //         const updatePost = await Post.findOneAndUpdate({
+    //             _id: postId
+    //         }, {
+    //             // increments selected property
+    //             $inc: {
+    //                 likes: 1
+    //             }
+    //         });
+    //         return res.status(200).send("Post updated!");
+    //     }
+    //     return res.status(400).send("Error while updating post.");
+
+    // } catch {
+    //     return res.status(400).send("Error while updating post.");
+    // }
+}
+
 module.exports = {
     addComment,
     updateComment,
-    deleteComment
+    deleteComment,
+    likeComment
 }

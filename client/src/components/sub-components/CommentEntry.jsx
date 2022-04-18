@@ -6,6 +6,7 @@ import "./CommentEntry.css";
 const CommentEntry = (props) => {
 
     const [ displayUpdateField, setDisplayUpdateField ] = useState(false);
+    const [ wasCommentLiked, setWasCommentLiked ] = useState(false);
     const [ updateCommentInput, setUpdateCommentInput ] = useState("");
     const convertedTime = DateTime.fromISO(props.comment.timeStamp).toRelative();
 
@@ -58,6 +59,31 @@ const CommentEntry = (props) => {
         })
     }
 
+    const likeComment = () => {
+        // console.log("props.comment._id: ", props.comment._id);
+        axios.patch(`/likeComment/${props.comment._id}`)
+        .then(response => {
+            console.log("Successfully connected with Axios PATCH request!")
+            props.getAllBlogs();
+        })
+        .catch(err => {
+            console.log("Error received during Axios PATCH request.");
+        })
+        setWasCommentLiked(true);
+    }
+
+    const unlikeComment = () => {
+        // axios.patch(`/unlikeComment/${props.comment._id}`)
+        // .then(response => {
+        //     console.log("Successfully connected with Axios PATCH request!")
+        //     props.getAllBlogs();
+        // })
+        // .catch(err => {
+        //     console.log("Error received during Axios PATCH request.");
+        // })
+        setWasCommentLiked(false);
+    }
+
     return (
         <div className="commentsEntry">
             <div className="commentsUser">
@@ -74,6 +100,15 @@ const CommentEntry = (props) => {
             <div className="commentLikes">
                 <p>Likes: {props.comment.likes}</p>
             </div>
+            { !wasCommentLiked ?
+                <div className="likeComment">
+                    <button onClick={likeComment}>Like</button>
+                </div>
+                :
+                <div className="unlikeComment">
+                    <button onClick={unlikeComment}>Unlike</button>
+                </div> 
+            }
             {
                 props.comment.username === props.username ?
                 <div>

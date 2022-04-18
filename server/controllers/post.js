@@ -12,8 +12,6 @@ const getAllPosts = async (req, res) => {
 
 const getUserBlogs = async (req, res) => {
     const userId = req.params.id;
-    // console.log("req.params: ", req.params);
-    // console.log("userId: ", userId);
     try {
         const posts = await Post.find({userId: userId});
         return res.status(200).send(posts);
@@ -24,7 +22,6 @@ const getUserBlogs = async (req, res) => {
 
 const createNewPost = async (req, res) => {
     const postObj = req.body;
-
     try {
         const post = await Post.create(postObj);
         return res.status(200).send("Post submitted!");
@@ -37,8 +34,6 @@ const createNewPost = async (req, res) => {
 const updatePost = async (req, res) => {
     const postId = req.params.id;
     const updateObj = req.body;
-    // console.log("postId: ", postId);
-    // console.log("updateObj: ", updateObj);
     try {
         const post = await Post.find({_id: postId});
 
@@ -105,7 +100,7 @@ const unlikePost = async (req, res) => {
 
     try {
         const post = await Post.find({_id: postId});
-        console.log("post: ", post);
+        // console.log("post: ", post);
         if (post.length === 1) {
             const updatePost = await Post.findOneAndUpdate({
                 _id: postId

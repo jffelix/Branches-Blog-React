@@ -83,3 +83,31 @@
     padding: 4px;
     margin: 4px 10px;
 }
+
+.likeComment {
+    text-align: center;
+    margin: 10px;
+}
+
+.likeComment button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(93, 143, 219);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 6px;
+    margin: 0 10px;
+}
+
+.unlikeComment {
+    text-align: center;
+    margin: 10px;
+}
+
+.unlikeComment button {
+    border-style: solid;
+    color: white;
+    background-color: rgb(143, 144, 146);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 6px;
+    margin: 0 10px;
+}
