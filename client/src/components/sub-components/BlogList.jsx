@@ -34,8 +34,7 @@ const BlogList = (props) => {
         )
 
     } else if (props.userBlogs) {
-
-        console.log("props.userBlogs: ", props.userBlogs);
+        // console.log("props.userBlogs: ", props.userBlogs);
         return (
             <div>
                 {props.userBlogs.map((userBlog, index) =>
