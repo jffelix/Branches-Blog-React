@@ -8,6 +8,7 @@ const BlogListEntry = (props) => {
 
     const [ commentInput, setCommentInput] = useState("");
     const [ displayUpdateInput, setDisplayUpdateInput] = useState(false);
+    const [ wasPostLiked, setWasPostLiked ] = useState(false);
     const [ updatePostInput, setUpdatePostInput ] = useState("");
     const convertedTime = DateTime.fromISO(props.blog.timeStamp).toRelative();
 
@@ -41,15 +42,7 @@ const BlogListEntry = (props) => {
         setDisplayUpdateInput(true);
     }
 
-    const submitUpdate = () => {
-        // create object for the input
-          // include new blog
-          // include new timestamp
-        // when update is successfully submitted
-          // displayUpdateInput becomes true
-            // input tag disappears
-          // post will display as "edited"
-        
+    const submitUpdate = () => {        
         const updateObj = {
             postId: props.blog._id,
             blog: updatePostInput,
@@ -76,6 +69,12 @@ const BlogListEntry = (props) => {
 
     const likePost = () => {
         console.log("Hello from likePost!");
+        setWasPostLiked(true);
+    }
+
+    const unlikePost = () => {
+        console.log("Hello from unlikePost!");
+        setWasPostLiked(false);
     }
 
     const deletePost = () => {
@@ -107,9 +106,15 @@ const BlogListEntry = (props) => {
             <div className="blogLikes">
                 <p>Likes: {props.blog.likes}</p>
             </div>
+            { !wasPostLiked ?
                 <div className="likePost">
                     <button onClick={likePost}>Like</button>
                 </div>
+                :
+                <div className="unlikePost">
+                    <button onClick={unlikePost}>Unlike</button>
+                </div> 
+            }
             {
                 props.username === props.blog.username ?
                 <div>
