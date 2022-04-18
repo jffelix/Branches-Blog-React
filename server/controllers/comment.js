@@ -93,21 +93,27 @@ const likeComment = async (req, res) => {
     const postId = req.params.id;
     console.log("postId: ", postId);
 
+    console.log("req.body: ", req.body);
+
     try {
-        const post = await Post.find({_id: postId});
-        console.log("post: ", post);
-        // if (post.length === 1) {
-        //     const updatePost = await Post.findOneAndUpdate({
-        //         _id: postId
-        //     }, {
-        //         // increments selected property
-        //         $inc: {
-        //             likes: 1
-        //         }
-        //     });
-        //     return res.status(200).send("Post updated!");
-        // }
-        // return res.status(400).send("Error while updating post.");
+        const post = await Post.find({ _id: postId });
+
+        if (post.length === 1) {
+            const updatePost = await Post.findOneAndUpdate({
+                _id: postId,
+                comments: {
+                    $elemMatch: {
+                        _id: req.body._id
+                    }
+                }
+            }, {
+                $set: {
+                    "comments.$.likes": req.body.likes
+                }
+            });
+            return res.status(200).send("Post updated!");
+        }
+        return res.status(400).send("Error while updating post.");
 
     } catch {
         return res.status(400).send("Error while updating post.");

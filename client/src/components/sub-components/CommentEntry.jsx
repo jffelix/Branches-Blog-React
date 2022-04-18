@@ -60,8 +60,19 @@ const CommentEntry = (props) => {
     }
 
     const likeComment = () => {
+        const updateObj = {
+            _id: props.comment._id,
+            likes: props.comment.likes
+        }
+
+        if (!wasCommentLiked) {
+            updateObj.likes++;
+        } else {
+            updateObj.likes--;
+        }
+
         // console.log("props.comment._id: ", props.comment._id);
-        axios.patch(`/likeComment/${props.postId}`)
+        axios.patch(`/likeComment/${props.postId}`, updateObj)
         .then(response => {
             console.log("Successfully connected with Axios PATCH request!")
             props.getAllBlogs();
@@ -69,19 +80,12 @@ const CommentEntry = (props) => {
         .catch(err => {
             console.log("Error received during Axios PATCH request.");
         })
-        setWasCommentLiked(true);
-    }
 
-    const unlikeComment = () => {
-        // axios.patch(`/unlikeComment/${props.comment._id}`)
-        // .then(response => {
-        //     console.log("Successfully connected with Axios PATCH request!")
-        //     props.getAllBlogs();
-        // })
-        // .catch(err => {
-        //     console.log("Error received during Axios PATCH request.");
-        // })
-        setWasCommentLiked(false);
+        if (!wasCommentLiked) {
+            setWasCommentLiked(true);
+        } else {
+            setWasCommentLiked(false);
+        }
     }
 
     return (
@@ -106,7 +110,7 @@ const CommentEntry = (props) => {
                 </div>
                 :
                 <div className="unlikeComment">
-                    <button onClick={unlikeComment}>Unlike</button>
+                    <button onClick={likeComment}>Unlike</button>
                 </div> 
             }
             {
