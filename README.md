@@ -13,6 +13,6 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - My Profile page
 
 ## Features In Progress
+- Forgot Password feature
 - Sort blogs by Most Likes
 - One "Like" per post/comment for user
-- Forgot Password feature
