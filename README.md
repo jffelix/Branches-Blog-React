@@ -16,3 +16,4 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - Forgot Password feature
 - Sort blogs by Most Likes
 - One "Like" per post/comment for user
+- Private messenger between users
