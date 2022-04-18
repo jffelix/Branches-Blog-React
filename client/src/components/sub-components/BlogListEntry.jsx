@@ -80,7 +80,14 @@ const BlogListEntry = (props) => {
     }
 
     const unlikePost = () => {
-        console.log("Hello from unlikePost!");
+        axios.patch(`/unlike/${props.blog._id}`)
+        .then(response => {
+            console.log("Successfully connected with Axios PATCH request!")
+            props.getAllBlogs();
+        })
+        .catch(err => {
+            console.log("Error received during Axios PATCH request.");
+        })
         setWasPostLiked(false);
     }
 
