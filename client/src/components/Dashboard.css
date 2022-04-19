@@ -87,6 +87,15 @@
     margin: 4px;
 }
 
+@media (max-width: 1700px) {
+    .createPost {
+        margin: 10px 500px;
+    }
+    .mainFeed {
+        margin: 10px 425px;
+    }
+}
+
 @media (max-width: 1430px) {
     .createPost {
         margin: 10px 250px;
