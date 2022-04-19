@@ -28,6 +28,13 @@ body {
     padding: 10px;
 }
 
+@media (max-width: 1700px) {
+    .signIn {
+        margin-right: 450;
+        margin-left: 450;
+    }
+}
+
 @media (max-width: 1430px) {
     .signIn {
         margin-right: 300;

@@ -74,7 +74,7 @@ const MyProfile = () => {
     }
 
     return (
-        <div>
+        <div className="fullProfile">
             <div className="backToDashboard">
                 <button onClick={backToDashboard}>Back to Dashboard</button>
             </div>
