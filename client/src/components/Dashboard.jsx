@@ -141,7 +141,7 @@ const Dashboard = () => {
     }
 
     return (
-        <div>
+        <div className="fullDashboard">
             <div className="navBar">
                 <div className="profileLink">
                     <h3>Welcome, {username}</h3>
