@@ -45,6 +45,12 @@
     margin: 10px 10px;
 }
 
+@media (max-width: 1700px) {
+    .fullProfile {
+        margin: 10px 350px;
+    }
+}
+
 @media (max-width: 1475px) {
     .fullProfile {
         margin: 10px 200px;
@@ -76,6 +82,9 @@
     .myProfile {
         margin: 20px 20px;
     }
+    .userBlogs h2 {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 650px) {
@@ -84,5 +93,8 @@
     }
     .myProfile {
         margin: 0 0;
+    }
+    .userBlogs h2 {
+        margin-left: 0;
     }
 }
