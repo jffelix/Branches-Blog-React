@@ -30,22 +30,22 @@ body {
 
 @media (max-width: 1430px) {
     .signIn {
-        margin-right: 150;
-        margin-left: 150;
+        margin-right: 300;
+        margin-left: 300;
     }
 }
 
 @media (max-width: 1250px) {
     .signIn {
-        margin-right: 100;
-        margin-left: 100;
+        margin-right: 200;
+        margin-left: 200;
     }
 }
 
 @media (max-width: 1100px) {
     .signIn {
-        margin-right: 100;
-        margin-left: 100;
+        margin-right: 150;
+        margin-left: 150;
     }
 }
 
