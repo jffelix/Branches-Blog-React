@@ -66,6 +66,7 @@
 
 .profileLink {
     text-align: right;
+    text-decoration: underline;
     font-family: 'Fira Sans', sans-serif;
     padding-right: 10px;
 }
