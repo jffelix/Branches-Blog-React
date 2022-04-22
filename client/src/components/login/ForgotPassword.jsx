@@ -33,8 +33,8 @@ const ForgotPassword = () => {
     return (
         <div className="fullForgotPassword">
             <div className="forgotPassword">
-                <h2>Password Reset</h2>
-                {message ? <p>{message}</p> : null}
+                <h2>Reset Password</h2>
+                {message ? <div className="resetSuccess"><p>{message}</p></div> : null}
                 {error && <Alert variant="danger">{error}</Alert>}
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <p>Email</p>
