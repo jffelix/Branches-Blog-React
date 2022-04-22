@@ -13,7 +13,7 @@ const ForgotPassword = () => {
 
     return (
         <div>
-            <h3>Hello from ForgotPassword Component!</h3>
+            <h3>Page under construction. Please return to Sign Up</h3>
             <button onClick={backToSignUp}>Back to Sign Up</button>
         </div>
     )
