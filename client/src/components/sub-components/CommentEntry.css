@@ -1,7 +1,10 @@
 .commentsEntry {
     background-color: rgb(226, 221, 221);
+    /* border-style: solid;
+    border-radius: 20px; */
     border-style: solid;
-    border-radius: 20px;
+    border-width: 4px 1.25em;
+    border-color: rgb(117, 56, 15);
     margin: 10px 50px;
     font-family: 'Fira Sans', sans-serif;
 }
