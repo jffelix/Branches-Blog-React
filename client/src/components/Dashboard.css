@@ -41,6 +41,8 @@
 .mainFeed {
     background-color: rgba(252, 231, 192, 0.856); 
     border-style: solid;
+    border-width: 4px 1.25em;
+    border-color: rgb(117, 56, 15);
     margin: 10px 100px;
 }
 
