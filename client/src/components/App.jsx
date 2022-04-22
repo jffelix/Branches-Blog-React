@@ -6,15 +6,15 @@ import MyProfile from "./profile/MyProfile.jsx";
 import ForgotPassword from "./login/ForgotPassword.jsx";
 import { Container } from "react-bootstrap";
 import AuthProvider from "../context/authContext.js";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
 const App = () => {
 
     return (
-        <div>
+        <div className="app">
             {/* <Container> */}
-            <div className="app">
+            <div>
                 <Router>
                     <AuthProvider>
                         <Routes>
