@@ -21,6 +21,9 @@ body {
     background-color: rgb(234, 253, 216);
     padding: 0 16px;
     border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(126, 79, 26);
+    border-width: 0.2em;
 }
 
 .subTitle {
@@ -40,7 +43,7 @@ body {
     font-family: 'Fira Sans', sans-serif;
     border-style: solid;
     border-color: rgb(199, 149, 91);
-    border-width: thick;
+    border-width: 1em;
     border-radius: 150px;
     text-align: center;
     margin: 50px 200px;
