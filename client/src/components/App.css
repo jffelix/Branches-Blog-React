@@ -10,8 +10,8 @@
     flex-direction: column;
     justify-content: center;
     background-image: url("https://previews.123rf.com/images/metrue/metrue1506/metrue150600088/41257458-tree-branches-and-green-leaves-background-spring-renewal-concept.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    /* width: 100%;
+    height: 100%; */
 }
