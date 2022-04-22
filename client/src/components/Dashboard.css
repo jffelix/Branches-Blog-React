@@ -33,7 +33,7 @@
 .createPost button {
     border-style: solid;
     color: white;
-    background-color: rgb(199, 149, 91);
+    background-color: rgb(139, 87, 27);
     font-family: 'Fira Sans', sans-serif;
     padding: 14px;
 }
@@ -75,7 +75,7 @@
 .myProfileButton button {
     border-style: solid;
     color: rgb(255, 255, 255);
-    background-color: rgb(216, 207, 253);
+    background-color: rgb(255, 148, 77);
     font-family: 'Fira Sans', sans-serif;
     padding: 6px;
 }
@@ -88,7 +88,7 @@
 .logOut button {
     border-style: solid;
     color: white;
-    background-color: rgb(199, 149, 91);
+    background-color: rgb(35, 41, 95);
     font-family: 'Fira Sans', sans-serif;
     padding: 6px;
     margin: 4px;
