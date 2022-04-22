@@ -57,7 +57,7 @@ const SignUp = () => {
                 <h1><span>Branches</span></h1>
             </div>
             <div className="subTitle">
-                <p>Making connections. For everyone!</p>
+                <p><span>Making connections. For everyone!</span></p>
             </div>
             <div className="signUp">
                 <div>
