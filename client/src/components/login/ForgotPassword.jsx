@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../context/authContext.js";
 import { Link, useNavigate } from "react-router-dom";
+import "./ForgotPassword.css";
 
 const ForgotPassword = () => {
 
