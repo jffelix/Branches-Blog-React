@@ -29,7 +29,7 @@ const ForgotPassword = () => {
     return (
         <div className="fullForgotPassword">
             <div className="forgotPassword">
-                <h2>Log In</h2>
+                <h2>Password Reset</h2>
                 {error && <Alert variant="danger">{error}</Alert>}
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <p>Email</p>
@@ -38,7 +38,7 @@ const ForgotPassword = () => {
                     <button>Reset Password</button>
                 </form>
                 <div>
-                    <Link to="/signin">Log In</Link>
+                    Remembered your password? <Link to="/signin">Log In</Link>
                 </div>
                 <div>
                     Don't have an account? <Link to="/">Sign Up</Link>
