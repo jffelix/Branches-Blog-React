@@ -112,10 +112,10 @@ const BlogListEntry = (props) => {
     return (
         <div className="blogs">
             <div className="blogUser">
-                <div>
+                <div className="blogUsername">
                     <p>{props.blog.username}</p>
                 </div>
-                <div>
+                <div className="convertedTime">
                     <p>{convertedTime}</p>
                 </div>
             </div>

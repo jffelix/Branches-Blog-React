@@ -16,6 +16,14 @@
     padding: 10px 20px;
 }
 
+.blogUsername p {
+    font-size: 20px;
+}
+
+.convertedTime p {
+    padding-top: 6px;
+}
+
 .blog {
     font-family: 'Comfortaa', cursive;
     font-size: 26px;
