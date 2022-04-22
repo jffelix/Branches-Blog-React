@@ -2,7 +2,7 @@
     /* background-image: url("https://cdn.wallpapersafari.com/56/22/C8FLY7.jpg"); */
     background-image: url("https://st2.depositphotos.com/1822734/5971/v/950/depositphotos_59717453-stock-illustration-autumn-tree.jpg");
     padding: 10px;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
 }
 
