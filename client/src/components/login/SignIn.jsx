@@ -29,21 +29,21 @@ const SignIn = () => {
 
     return (
         <div className="fullSignIn">
-        <div className="signIn">
-            <h2>Log In</h2>
-            {error && <Alert variant="danger">{error}</Alert>}
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <p>Email</p>
-                <input type="email" ref={emailRef} required />
-                <p>Password</p>
-                <input type="password" ref={passwordRef} required />
-                <p></p>
-                <button>Log In</button>
-            </form>
-            <div>
-                Don't have an account? <Link to="/">Sign Up</Link>
+            <div className="signIn">
+                <h2>Log In</h2>
+                {error && <Alert variant="danger">{error}</Alert>}
+                <form onSubmit={(e) => handleSubmit(e)}>
+                    <p>Email</p>
+                    <input type="email" ref={emailRef} required />
+                    <p>Password</p>
+                    <input type="password" ref={passwordRef} required />
+                    <p></p>
+                    <button>Log In</button>
+                </form>
+                <div>
+                    Don't have an account? <Link to="/">Sign Up</Link>
+                </div>
             </div>
-        </div>
         </div>
     )
 }

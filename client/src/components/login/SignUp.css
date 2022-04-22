@@ -2,12 +2,11 @@ body {
     background-color: rgb(201, 248, 201);
 }
 
-/* .main {
-    background-image: url("https://previews.123rf.com/images/metrue/metrue1506/metrue150600088/41257458-tree-branches-and-green-leaves-background-spring-renewal-concept.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0px;
-} */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .mainTitle {
     text-align: center;
@@ -41,7 +40,7 @@ body {
     border-style: solid;
     border-color: rgb(199, 149, 91);
     border-width: thick;
-    border-radius: 20px;
+    border-radius: 150px;
     text-align: center;
     margin: 50px 200px;
     padding: 30px;
@@ -63,15 +62,16 @@ body {
 
 @media (max-width: 1700px) {
     .main {
-        margin-right: 300px;
-        margin-left: 300px;
+        margin: 150px 300px;
     }
 }
 
 @media (max-width: 1430px) {
     .main {
-        margin-right: 150px;
+        /* margin-right: 150px;
         margin-left: 150px;
+        margin-top: 300px; */
+        margin: 150px;
     }
 }
 
