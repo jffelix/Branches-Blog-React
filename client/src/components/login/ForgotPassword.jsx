@@ -7,8 +7,10 @@ const ForgotPassword = () => {
 
     const emailRef = useRef();
     // const passwordRef = useRef();
+    const { resetPassword } = useAuth();
     const { signIn } = useAuth();
     const [ error, setError ] = useState("");
+    const [ message, setMessage ] = useState("");
     const [ loading, setLoading ] = useState(false);
     const navigate = useNavigate();
 
@@ -18,8 +20,9 @@ const ForgotPassword = () => {
         try {
             setError("");
             setLoading(true);
-            // await signIn(emailRef.current.value, passwordRef.current.value);
-            navigate("/signin", { replace: true });
+            // you can use temp-mail.org for testing emails
+            await resetPassword(emailRef.current.value);
+            setMessage("Check inbox for further instructions.");
         } catch {
             setError("Failed to reset password.");
         }
@@ -30,6 +33,7 @@ const ForgotPassword = () => {
         <div className="fullForgotPassword">
             <div className="forgotPassword">
                 <h2>Password Reset</h2>
+                {message ? <p>{message}</p> : null}
                 {error && <Alert variant="danger">{error}</Alert>}
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <p>Email</p>
