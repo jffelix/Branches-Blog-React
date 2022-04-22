@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 const ForgotPassword = () => {
 
     const emailRef = useRef();
-    const passwordRef = useRef();
+    // const passwordRef = useRef();
     const { signIn } = useAuth();
     const [ error, setError ] = useState("");
     const [ loading, setLoading ] = useState(false);
@@ -18,10 +18,10 @@ const ForgotPassword = () => {
         try {
             setError("");
             setLoading(true);
-            await signIn(emailRef.current.value, passwordRef.current.value);
-            navigate("/dashboard", { replace: true });
+            // await signIn(emailRef.current.value, passwordRef.current.value);
+            navigate("/signin", { replace: true });
         } catch {
-            setError("Failed to sign in");
+            setError("Failed to reset password.");
         }
         setLoading(false);
     } 

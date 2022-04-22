@@ -33,11 +33,16 @@ const AuthProvider = ({ children }) => {
         return auth.signOut();
     }
 
+    const resetPassword = (email) => {
+        return auth.sendPasswordResetEmail();
+    }
+
     const value = {
         currentUser,
         signUp,
         signIn,
-        signOut
+        signOut,
+        resetPassword
     }
 
     return (
