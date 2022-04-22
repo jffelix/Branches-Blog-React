@@ -7,13 +7,14 @@ import ForgotPassword from "./login/ForgotPassword.jsx";
 import { Container } from "react-bootstrap";
 import AuthProvider from "../context/authContext.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
 const App = () => {
 
     return (
         <div>
             {/* <Container> */}
-            <div>
+            <div className="app">
                 <Router>
                     <AuthProvider>
                         <Routes>
