@@ -1,8 +1,8 @@
 .fullDashboard {
-    background-image: url("https://imgc.allpostersimages.com/img/posters/spring-branch-with-fresh-green-leaves-isolated-on-white-background_u-L-Q103Y680.jpg?artHeight=550&artPerspective=n&artWidth=550&background=ffffff");
+    background-image: url("https://www.aguecohydrology.org/uploads/2/5/1/2/25124818/tree_orig.jpg");
     padding: 10px;
     /* background-repeat: no-repeat; */
-    /* background-size: cover; */
+    background-size: contain;
 }
 
 .dashboard {
