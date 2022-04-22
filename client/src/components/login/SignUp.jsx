@@ -54,7 +54,7 @@ const SignUp = () => {
     return (
         <div className="main">
             <div className="mainTitle">
-                <h1>Branches</h1>
+                <h1><span>Branches</span></h1>
             </div>
             <div className="subTitle">
                 <p>Making connections. For everyone!</p>

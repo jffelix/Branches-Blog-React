@@ -1,5 +1,9 @@
 body {
     background-color: rgb(201, 248, 201);
+    background-image: url("https://previews.123rf.com/images/metrue/metrue1506/metrue150600088/41257458-tree-branches-and-green-leaves-background-spring-renewal-concept.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .mainTitle {
@@ -8,6 +12,12 @@ body {
     color: rgb(163, 104, 36);
     font-size: 28px;
     margin-top: 30px;
+}
+
+.mainTitle span {
+    background-color: rgb(241, 239, 239);
+    padding: 0 16px;
+    border-radius: 20px;
 }
 
 .subTitle {
