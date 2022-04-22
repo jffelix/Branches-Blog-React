@@ -28,6 +28,7 @@ const SignIn = () => {
     } 
 
     return (
+        <div className="fullSignIn">
         <div className="signIn">
             <h2>Log In</h2>
             {error && <Alert variant="danger">{error}</Alert>}
@@ -42,6 +43,7 @@ const SignIn = () => {
             <div>
                 Don't have an account? <Link to="/">Sign Up</Link>
             </div>
+        </div>
         </div>
     )
 }

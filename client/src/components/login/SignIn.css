@@ -2,6 +2,12 @@ body {
     background-color: rgb(201, 248, 201);
 }
 
+.fullSignIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .signIn {
     background-color: rgba(252, 231, 192, 0.856);
     font-family: 'Fira Sans', sans-serif;
