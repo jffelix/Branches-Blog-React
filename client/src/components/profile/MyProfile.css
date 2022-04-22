@@ -1,7 +1,8 @@
 .fullProfile {
-    background-image: url("https://imgc.allpostersimages.com/img/posters/spring-branch-with-fresh-green-leaves-isolated-on-white-background_u-L-Q103Y680.jpg?artHeight=550&artPerspective=n&artWidth=550&background=ffffff");
+    /* background-image: url("https://cdn.wallpapersafari.com/56/22/C8FLY7.jpg"); */
+    background-image: url("https://st2.depositphotos.com/1822734/5971/v/950/depositphotos_59717453-stock-illustration-autumn-tree.jpg");
     padding: 10px;
-    height: 100%;
+    background-size: cover;
     width: 100%;
 }
 
@@ -31,6 +32,8 @@
 
 .userHeader h3 {
     font-size: 30px;
+    color: white;
+    background-color: rgb(243, 66, 22);
 }
 
 .userBlogs h2 {
@@ -38,7 +41,7 @@
     color: white;
     background-color: rgb(165, 101, 42);
     border-bottom: solid;
-    margin-left: 30px;
+    margin: 0 30px;
     padding: 10px;
 }
 
@@ -52,6 +55,31 @@
     margin: 10px 10px;
 }
 
+@media (max-width: 1430px) {
+    .myProfile {
+        margin: 4% 20%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .myProfile {
+        margin: 4% 15%;
+    }
+}
+
+@media (max-width: 800px) {
+    .myProfile {
+        margin: 2% 1%;
+    }
+}
+
+@media (max-width: 650px) {
+    .myProfile {
+        margin: 2% 1%;
+    }
+}
+
+/* 
 @media (max-width: 1700px) {
     .fullProfile {
         margin: 10px 350px;
@@ -104,4 +132,4 @@
     .userBlogs h2 {
         margin-left: 0;
     }
-}
+} */
