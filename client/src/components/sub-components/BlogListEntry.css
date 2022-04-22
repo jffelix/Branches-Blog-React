@@ -49,7 +49,7 @@
 .likePost button {
     border-style: solid;
     color: white;
-    background-color: rgb(93, 143, 219);
+    background-color: rgb(80, 140, 231);
     font-family: 'Fira Sans', sans-serif;
     padding: 6px;
     margin: 0 10px;
@@ -71,8 +71,8 @@
 
 .updatePost button {
     border-style: solid;
-    color: rgb(145, 140, 140);
-    background-color: rgb(237, 245, 164);
+    color: rgb(95, 92, 92);
+    background-color: rgb(236, 248, 130);
     font-family: 'Fira Sans', sans-serif;
     padding: 6px;
     margin: 0 10px;
@@ -81,7 +81,7 @@
 .deletePost button {
     border-style: solid;
     color: white;
-    background-color: rgb(241, 156, 134);
+    background-color: rgb(238, 132, 106);
     font-family: 'Fira Sans', sans-serif;
     padding: 6px;
     margin: 0 10px;
