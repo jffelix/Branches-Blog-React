@@ -1,6 +1,10 @@
 .blogs {
-    background-color: white;
+    /* background-color: white; */
+    background-color: rgb(231, 253, 231);
+    /* border-style: solid; */
     border-style: solid;
+    border-width: thick;
+    border-color: rgb(17, 107, 14);
     font-family: 'Fira Sans', sans-serif;
     margin: 10px 50px;
 }
