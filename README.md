@@ -14,7 +14,6 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - "Like" and "Unlike" system
 
 ## Features In Progress
-- Forgot Password feature
 - Sort blogs by Most Likes
 - One "Like" per post/comment for user
 - See who liked your posts/comments
