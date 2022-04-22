@@ -36,6 +36,11 @@
     background-color: rgb(243, 66, 22);
 }
 
+.userBlogs div {
+    border-width: 4px 1.25em;
+    border-color: rgb(117, 56, 15);
+}
+
 .userBlogs h2 {
     text-align: left;
     color: white;

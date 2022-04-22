@@ -87,11 +87,13 @@ const MyProfile = () => {
                 </div>
                 <div className="userBlogs">
                     <h2>Your Blogs</h2>
-                    <BlogList
-                        userBlogs={userBlogs}
-                        username={username}
-                        getUserBlogs={getUserBlogsRefresh}
-                    />
+                    <div>
+                        <BlogList
+                            userBlogs={userBlogs}
+                            username={username}
+                            getUserBlogs={getUserBlogsRefresh}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
