@@ -18,7 +18,7 @@
     font-family: 'Fira Sans', sans-serif;
     border-style: solid;
     border-color: rgb(199, 149, 91);
-    border-width: thick;
+    border-width: 1em;
     border-radius: 150px;
     text-align: center;
     /* margin: 50px 200px; */
