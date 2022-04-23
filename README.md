@@ -17,4 +17,5 @@ Welcome to my Branches Blog! This is a social-media application designed for com
 - Sort blogs by Most Likes
 - One "Like" per post/comment for user
 - See who liked your posts/comments
+- My Settings
 - Private messenger between users
