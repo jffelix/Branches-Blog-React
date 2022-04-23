@@ -20,6 +20,9 @@ const commentSchema = new mongoose.Schema({
     postId: {
         type: String
     }
+    // userLikes: {
+    //     type: Array
+    // }
 });
 
 const postSchema = new mongoose.Schema({
@@ -41,7 +44,9 @@ const postSchema = new mongoose.Schema({
     comments: {
         type: [commentSchema]
     }
-     
+    // userLikes: {
+    //     type: Array
+    // }
 });
 
 var postItem = mongoose.model("Post", postSchema);

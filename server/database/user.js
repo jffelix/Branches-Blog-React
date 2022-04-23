@@ -7,8 +7,12 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String
     }
-    // userId: {
-    //     type: Number
+    // profilePhoto: {
+    //     type: String
+    // }
+    // ,
+    // messages: {
+    //     type: Array
     // }
 });
 
