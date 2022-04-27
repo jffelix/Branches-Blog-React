@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import BlogList from "./BlogList.jsx";
+import UserLikes from "./UserLikes.jsx";
 import { DateTime } from "luxon";
 import "./BlogListEntry.css";
-import Modal from '@mui/material/Modal';
+// import Modal from '@mui/material/Modal';
+// import { display } from "@mui/system";
 
 const BlogListEntry = (props) => {
 
@@ -103,6 +105,11 @@ const BlogListEntry = (props) => {
         setDisplayLikes(true);
     }
 
+    const hideLikes = () => {
+        console.log("Hello from hideLikes!");
+        setDisplayLikes(false);
+    }
+
     const deletePost = () => {
         const selectedPostId = props.blog._id;
         
@@ -131,6 +138,12 @@ const BlogListEntry = (props) => {
             </div>
             <div className="blogLikes" onClick={seeLikes}>
                 <p>Likes: {props.blog.likes}</p>
+            </div>
+            <div>
+                <UserLikes 
+                    displayLikes={displayLikes} 
+                    hideLikes={hideLikes}
+                />
             </div>
             { !wasPostLiked ?
                 <div className="likePost">
