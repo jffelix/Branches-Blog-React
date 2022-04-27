@@ -96,6 +96,10 @@ const BlogListEntry = (props) => {
 
     }
 
+    const seeLikes = () => {
+        console.log("Hello from seeLikes!");
+    }
+
     const deletePost = () => {
         const selectedPostId = props.blog._id;
         
@@ -122,7 +126,7 @@ const BlogListEntry = (props) => {
             <div className="blog">
                 <h4>{props.blog.blog}</h4>
             </div>
-            <div className="blogLikes">
+            <div className="blogLikes" onClick={seeLikes}>
                 <p>Likes: {props.blog.likes}</p>
             </div>
             { !wasPostLiked ?
