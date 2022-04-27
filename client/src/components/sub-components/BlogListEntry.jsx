@@ -3,12 +3,14 @@ import axios from "axios";
 import BlogList from "./BlogList.jsx";
 import { DateTime } from "luxon";
 import "./BlogListEntry.css";
+import Modal from '@mui/material/Modal';
 
 const BlogListEntry = (props) => {
 
     const [ commentInput, setCommentInput] = useState("");
     const [ displayUpdateInput, setDisplayUpdateInput] = useState(false);
     const [ wasPostLiked, setWasPostLiked ] = useState(false);
+    const [ displayLikes, setDisplayLikes ] = useState(false);
     const [ updatePostInput, setUpdatePostInput ] = useState("");
     const convertedTime = DateTime.fromISO(props.blog.timeStamp).toRelative();
 
@@ -98,6 +100,7 @@ const BlogListEntry = (props) => {
 
     const seeLikes = () => {
         console.log("Hello from seeLikes!");
+        setDisplayLikes(true);
     }
 
     const deletePost = () => {
