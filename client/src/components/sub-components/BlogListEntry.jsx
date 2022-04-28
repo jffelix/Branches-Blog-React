@@ -102,12 +102,12 @@ const BlogListEntry = (props) => {
     }
 
     const seeLikes = () => {
-        console.log("Hello from seeLikes!");
+        // console.log("Hello from seeLikes!");
         setDisplayLikes(true);
     }
 
     const hideLikes = () => {
-        console.log("Hello from hideLikes!");
+        // console.log("Hello from hideLikes!");
         setDisplayLikes(false);
     }
 
