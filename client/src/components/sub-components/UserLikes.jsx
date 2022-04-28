@@ -26,8 +26,18 @@ const UserLikes = (props) => {
             >
                 <Box sx={style}>
                     <Typography>
-                        Hello from UserLikes Component!
+                        User Likes
                     </Typography>
+                    {
+                        props.sampleLikes.map((user, index) => {
+                                return (
+                                    <div key={index}>
+                                        <p>{user.username}</p>
+                                    </div>
+                                )
+                            } 
+                        )
+                    }
                     <Button onClick={props.hideLikes}>Close</Button>
                 </Box>
             </Modal>

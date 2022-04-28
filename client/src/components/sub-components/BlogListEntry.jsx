@@ -4,6 +4,7 @@ import BlogList from "./BlogList.jsx";
 import UserLikes from "./UserLikes.jsx";
 import { DateTime } from "luxon";
 import "./BlogListEntry.css";
+import sampleLikes from "../sampleData/sampleLikes.js";
 // import Modal from '@mui/material/Modal';
 // import { display } from "@mui/system";
 
@@ -139,10 +140,11 @@ const BlogListEntry = (props) => {
             <div className="blogLikes" onClick={seeLikes}>
                 <p>Likes: {props.blog.likes}</p>
             </div>
-            <div>
+            <div className="userLikes">
                 <UserLikes 
                     displayLikes={displayLikes} 
                     hideLikes={hideLikes}
+                    sampleLikes={sampleLikes}
                 />
             </div>
             { !wasPostLiked ?
